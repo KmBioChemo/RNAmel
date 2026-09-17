@@ -2,11 +2,11 @@
 % Please edit documentation in R/report.R
 \name{embed_fig}
 \alias{embed_fig}
-\title{Embed any RNAflow figure as an \if{html}{\out{<img>}} data URI}
+\title{Embed any AMEL figure as an \if{html}{\out{<img>}} data URI}
 \usage{
 embed_fig(obj, w = 6, h = 4, dpi = 110)
 }
 \description{
-Embed any RNAflow figure as an \if{html}{\out{<img>}} data URI
+Embed any AMEL figure as an \if{html}{\out{<img>}} data URI
 }
 \keyword{internal}

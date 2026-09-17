@@ -4,7 +4,7 @@
 \alias{ui_widgets}
 \title{Reusable UI widgets}
 \description{
-Shared components used across RNAflow modules: color pickers with
+Shared components used across AMEL modules: color pickers with
 synchronized text fields, slider+numeric input pairs, export toolbar.
 }
 \keyword{internal}

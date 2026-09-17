@@ -4,7 +4,7 @@
 \alias{utils_annotation}
 \title{Organism annotation utilities}
 \description{
-Maps RNAflow's organism keyword (\code{"human"} / \code{"mouse"} / \code{"rat"}) to the
+Maps AMEL's organism keyword (\code{"human"} / \code{"mouse"} / \code{"rat"}) to the
 Bioconductor annotation database, MSigDB species name, and KEGG / Reactome
 organism codes, and converts gene identifiers (symbol <-> ENTREZ). Pure
 helpers shared by the functional-enrichment layer.

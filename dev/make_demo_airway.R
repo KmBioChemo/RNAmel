@@ -1,4 +1,4 @@
-# Prepare a real, published bulk RNA-seq demo dataset for RNAflow.
+# Prepare a real, published bulk RNA-seq demo dataset for AMEL.
 #
 # Source: the `airway` package (Himes et al., PLoS ONE 2014) -- human airway
 # smooth muscle cells, 4 cell lines each treated with dexamethasone (a
@@ -10,7 +10,7 @@
 #   - `cell` is a natural covariate to demonstrate batch/covariate adjustment
 #   - only 8 samples, which honestly exercises the small-N WGCNA caveat
 #
-# This script maps Ensembl IDs to gene symbols (RNAflow's enrichment works on
+# This script maps Ensembl IDs to gene symbols (AMEL's enrichment works on
 # symbols), collapses duplicate symbols, filters low-count genes, and writes
 # inst/extdata/demo_airway_{counts,metadata}.csv. Reproducible.
 

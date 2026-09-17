@@ -1,6 +1,6 @@
-# RNAflow — reproducible container
+# AMEL — reproducible container
 #
-# Fixes the R / Bioconductor release that RNAflow is developed against (R 4.5 /
+# Fixes the R / Bioconductor release that AMEL is developed against (R 4.5 /
 # Bioconductor 3.22) and the system libraries, so the heavy Bioconductor
 # dependency stack resolves reliably. This is the main reproducibility layer —
 # it fixes the R/Bioc release and system environment, which a renv lockfile
@@ -12,9 +12,9 @@
 # Open:   http://localhost:8080
 FROM bioconductor/bioconductor_docker:RELEASE_3_22
 
-LABEL org.opencontainers.image.title="RNAflow" \
+LABEL org.opencontainers.image.title="AMEL" \
       org.opencontainers.image.description="Interactive Shiny platform for downstream bulk RNA-seq analysis" \
-      org.opencontainers.image.source="https://github.com/KmBioChemo/RNAflow" \
+      org.opencontainers.image.source="https://github.com/KmBioChemo/AMEL" \
       org.opencontainers.image.licenses="MIT"
 
 WORKDIR /rnaflow
@@ -25,10 +25,10 @@ COPY DESCRIPTION ./DESCRIPTION
 RUN Rscript -e 'if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes"); \
                 remotes::install_deps(dependencies = TRUE, upgrade = "never")'
 
-# 2) Install RNAflow itself.
+# 2) Install AMEL itself.
 COPY . .
 RUN R CMD INSTALL --no-multiarch --with-keep.source .
 
 # Shiny must listen on all interfaces to be reachable from outside the container.
 EXPOSE 8080
-CMD ["Rscript", "-e", "options(shiny.host = '0.0.0.0'); RNAflow::run_app(port = 8080L, launch_browser = FALSE)"]
+CMD ["Rscript", "-e", "options(shiny.host = '0.0.0.0'); AMEL::run_app(port = 8080L, launch_browser = FALSE)"]

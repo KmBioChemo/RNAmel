@@ -8,7 +8,7 @@ enrich_network_data(df, n = 30)
 }
 \arguments{
 \item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} (uses \code{leadingEdge}) or
-\code{\link[=run_ora]{run_ora()}} (uses \code{geneID})}
+\code{\link[decoupleR:run_ora]{run_ora()}} (uses \code{geneID})}
 
 \item{n}{keep the top \code{n} terms by padj}
 }

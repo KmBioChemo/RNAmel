@@ -77,9 +77,9 @@ mod_data_server <- function(id) {
     # (there is no browsable inst/extdata/ folder after install).
     load_demo <- function(base, organism) {
       cf <- system.file("extdata", paste0(base, "_counts.csv"),
-                        package = "RNAflow")
+                        package = "AMEL")
       mf <- system.file("extdata", paste0(base, "_metadata.csv"),
-                        package = "RNAflow")
+                        package = "AMEL")
       if (!nzchar(cf) || !nzchar(mf)) {
         shiny::showNotification(
           "Demo files were not found in the installed package.",

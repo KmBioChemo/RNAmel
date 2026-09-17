@@ -20,10 +20,10 @@ make_report_project <- function() {
   p
 }
 
-test_that("session_manifest lists RNAflow and installed packages", {
+test_that("session_manifest lists AMEL and installed packages", {
   m <- session_manifest()
   expect_s3_class(m, "data.frame")
-  expect_true("RNAflow" %in% m$package)
+  expect_true("AMEL" %in% m$package)
   expect_true(all(nzchar(m$version)))
 })
 
@@ -36,7 +36,7 @@ test_that("build_report_html writes a self-contained HTML file", {
   expect_gt(file.size(f), 5000)              # non-trivial (embedded figures)
 
   html <- paste(readLines(f, warn = FALSE), collapse = "\n")
-  expect_match(html, "RNAflow analysis report", fixed = TRUE)
+  expect_match(html, "AMEL analysis report", fixed = TRUE)
   expect_match(html, "Reproducible R script", fixed = TRUE)
   expect_match(html, "group: B vs A", fixed = TRUE)
   expect_match(html, "data:image/png;base64,", fixed = TRUE)   # embedded figure

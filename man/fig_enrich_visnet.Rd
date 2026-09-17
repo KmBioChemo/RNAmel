@@ -7,7 +7,7 @@
 fig_enrich_visnet(df, n = 30, min_similarity = 0.2)
 }
 \arguments{
-\item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} or \code{\link[=run_ora]{run_ora()}}}
+\item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} or \code{\link[decoupleR:run_ora]{run_ora()}}}
 
 \item{n}{number of top terms (by padj) to include}
 

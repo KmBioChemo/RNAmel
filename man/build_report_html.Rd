@@ -7,7 +7,7 @@
 build_report_html(
   project,
   file,
-  title = "RNAflow analysis report",
+  title = "AMEL analysis report",
   generated = NULL
 )
 }

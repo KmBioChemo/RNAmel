@@ -1,4 +1,4 @@
-url: https://KmBioChemo.github.io/RNAflow/
+url: https://KmBioChemo.github.io/AMEL/
 
 template:
   bootstrap: 5
@@ -6,7 +6,7 @@ template:
     primary: "#1D9E75"
 
 home:
-  title: RNAflow
+  title: AMEL
   description: Downstream bulk RNA-seq analysis platform.
 
 reference:
@@ -151,5 +151,5 @@ reference:
 
 - title: Package overview
   contents:
-  - RNAflow-package
+  - AMEL-package
   - "%>%"

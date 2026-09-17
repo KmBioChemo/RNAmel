@@ -31,3 +31,9 @@ padj, NES, ES, size, leadingEdge (list-column) and leading_edge (string)
 \description{
 Run GSEA (fgsea) on DE results
 }
+\note{
+\code{res} and \code{gene_sets} must share the \strong{same gene-identifier space}
+(typically gene symbols). The Shiny app maps IDs to symbols before calling
+this; a script that passes Ensembl/Entrez IDs against symbol-keyed sets
+will match nothing. Use \code{\link[=ids_to_symbols]{ids_to_symbols()}} / \code{\link[=map_de_to_symbols]{map_de_to_symbols()}} first.
+}

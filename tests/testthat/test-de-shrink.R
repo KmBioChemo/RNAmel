@@ -1,8 +1,8 @@
 test_that("run_deseq2 keeps the Wald stat and separates inference from shrinkage", {
   skip_if_not_installed("DESeq2")
   skip_on_cran()
-  f_counts <- system.file("extdata", "demo_airway_counts.csv", package = "RNAflow")
-  f_meta   <- system.file("extdata", "demo_airway_metadata.csv", package = "RNAflow")
+  f_counts <- system.file("extdata", "demo_airway_counts.csv", package = "AMEL")
+  f_meta   <- system.file("extdata", "demo_airway_metadata.csv", package = "AMEL")
   skip_if(!file.exists(f_counts) || !file.exists(f_meta))
   counts <- read_counts(f_counts)
   meta   <- read_metadata(f_meta, counts_samples = colnames(counts))
@@ -39,8 +39,8 @@ test_that("run_deseq2 keeps the Wald stat and separates inference from shrinkage
 test_that("run_deseq2 keeps numeric covariates numeric (continuous adjustment)", {
   skip_if_not_installed("DESeq2")
   skip_on_cran()
-  f_counts <- system.file("extdata", "demo_airway_counts.csv", package = "RNAflow")
-  f_meta   <- system.file("extdata", "demo_airway_metadata.csv", package = "RNAflow")
+  f_counts <- system.file("extdata", "demo_airway_counts.csv", package = "AMEL")
+  f_meta   <- system.file("extdata", "demo_airway_metadata.csv", package = "AMEL")
   skip_if(!file.exists(f_counts) || !file.exists(f_meta))
   counts <- read_counts(f_counts)
   meta   <- read_metadata(f_meta, counts_samples = colnames(counts))

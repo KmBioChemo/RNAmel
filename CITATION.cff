@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use RNAflow, please cite it using this metadata."
-title: "RNAflow: An Interactive and Reproducible Platform for Downstream Bulk RNA-seq Analysis"
+message: "If you use AMEL, please cite it using this metadata."
+title: "The Auditable Modular Expression Laboratory (AMEL): an integrated R/Shiny platform for reproducible bulk RNA-seq analysis and interpretation"
 type: software
 authors:
   - family-names: Pfanner
@@ -17,10 +17,10 @@ authors:
     email: karim.matmat@unibas.ch
     orcid: "https://orcid.org/0009-0009-8226-4846"
     affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
-repository-code: "https://github.com/KmBioChemo/RNAflow"
-url: "https://KmBioChemo.github.io/RNAflow/"
+repository-code: "https://github.com/KmBioChemo/AMEL"
+url: "https://KmBioChemo.github.io/AMEL/"
 abstract: >-
-  RNAflow is a modular Shiny application packaged as an R package for
+  AMEL is a modular Shiny application packaged as an R package for
   downstream bulk RNA-seq analysis. From a raw count matrix and sample
   metadata it provides differential expression (DESeq2), quality-control
   diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked

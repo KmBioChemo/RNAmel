@@ -1,8 +1,8 @@
 ---
-title: "Getting started with RNAflow"
+title: "Getting started with AMEL"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Getting started with RNAflow}
+  %\VignetteIndexEntry{Getting started with AMEL}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,13 +13,13 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.width = 6,
 have_deseq2 <- requireNamespace("DESeq2", quietly = TRUE)
 ```
 
-RNAflow is a downstream bulk RNA-seq analysis platform, usable either as an
+AMEL is a downstream bulk RNA-seq analysis platform, usable either as an
 interactive Shiny app (`run_app()`) or as a set of pure, scriptable functions.
 This vignette is a **reproducible reference analysis**: the core steps below run
 on a bundled, published dataset so you can reproduce a real result end to end.
 
 ```{r setup}
-library(RNAflow)
+library(AMEL)
 ```
 
 ## The data
@@ -30,9 +30,9 @@ dexamethasone vs. control across four cell lines.
 
 ```{r load}
 counts <- read_counts(system.file("extdata", "demo_airway_counts.csv",
-                                  package = "RNAflow"))
+                                  package = "AMEL"))
 meta   <- read_metadata(system.file("extdata", "demo_airway_metadata.csv",
-                                    package = "RNAflow"),
+                                    package = "AMEL"),
                         counts_samples = colnames(counts))
 dim(counts)
 head(meta)
@@ -132,5 +132,5 @@ Everything above is also available point-and-click in the app:
 run_app()
 ```
 
-See the [package website](https://KmBioChemo.github.io/RNAflow/) for the full
+See the [package website](https://KmBioChemo.github.io/AMEL/) for the full
 function reference and the README for the feature overview.

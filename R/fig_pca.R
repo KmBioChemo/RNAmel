@@ -137,6 +137,6 @@ fig_pca <- function(counts_mat, metadata = NULL, n_top = 500,
       hovermode = "closest", paper_bgcolor = "white", plot_bgcolor = "white",
       margin = list(t = 55, r = 18, b = 48, l = 58)
     ) %>%
-    rnaflow_plotly() %>%
+    amel_plotly() %>%
     plotly::config(displaylogo = FALSE)
 }

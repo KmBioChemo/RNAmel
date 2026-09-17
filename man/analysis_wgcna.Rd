@@ -10,7 +10,7 @@ module-trait correlation, and intramodular hub genes. No Shiny dependency.
 }
 \details{
 Conventions: \code{counts_norm} is the normalized (e.g. vst) matrix with genes
-in rows and samples in columns (as elsewhere in RNAflow). WGCNA wants the
+in rows and samples in columns (as elsewhere in AMEL). WGCNA wants the
 transpose, so \code{\link[=wgcna_datexpr]{wgcna_datexpr()}} returns a samples x genes matrix
 (\code{datExpr}) that the other functions consume.
 }

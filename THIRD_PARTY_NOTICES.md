@@ -1,9 +1,9 @@
 # Third-party data and resources
 
-RNAflow bundles a small number of third-party datasets and biological
+AMEL bundles a small number of third-party datasets and biological
 networks so that its demo loaders and offline activity inference work
-without a network connection. **The RNAflow MIT license (see `LICENSE`)
-covers only RNAflow's own source code, not these resources.** Each remains
+without a network connection. **The AMEL MIT license (see `LICENSE`)
+covers only AMEL's own source code, not these resources.** Each remains
 under its own upstream license and terms — please cite the original sources
 when you use them, and check the upstream terms before any commercial use.
 
@@ -60,5 +60,5 @@ see `data-raw/make_networks.R` for the exact queries. Human only.
   and `dev/make_demo_airway.R` / `dev/make_demo_tcga.R` (demos).
 - Mouse and rat activity inference still fetch networks live from OmniPath;
   only the human snapshots are bundled.
-- If you redistribute RNAflow, keep this notice and consult each resource's
+- If you redistribute AMEL, keep this notice and consult each resource's
   current upstream license before commercial use.

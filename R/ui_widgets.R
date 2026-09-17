@@ -1,6 +1,6 @@
 #' Reusable UI widgets
 #'
-#' Shared components used across RNAflow modules: color pickers with
+#' Shared components used across AMEL modules: color pickers with
 #' synchronized text fields, slider+numeric input pairs, export toolbar.
 #'
 #' @name ui_widgets

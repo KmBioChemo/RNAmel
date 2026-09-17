@@ -1,5 +1,5 @@
 # ====================================================================
-# RNAflow — developer workflow
+# AMEL — developer workflow
 # Run these commands from RStudio while developing.
 # ====================================================================
 
@@ -7,7 +7,7 @@
 devtools::load_all()
 
 # 2. Launch the app for interactive testing
-RNAflow::run_app()
+AMEL::run_app()
 
 # 3. Re-generate documentation (after changing roxygen comments)
 devtools::document()

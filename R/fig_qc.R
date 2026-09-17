@@ -149,7 +149,7 @@ fig_lib_sizes <- function(counts, metadata = NULL,
   p <- ggplot2::ggplot(df, ggplot2::aes(x = .data$sample, y = .data$lib))
   if (!is.null(fill_by)) {
     p <- p + ggplot2::geom_col(ggplot2::aes(fill = .data$group), width = 0.8) +
-      scale_fill_rnaflow(name = NULL)
+      scale_fill_amel(name = NULL)
   } else {
     p <- p + ggplot2::geom_col(fill = "#1D9E75", width = 0.8)
   }

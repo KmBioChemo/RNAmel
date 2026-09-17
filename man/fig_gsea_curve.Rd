@@ -31,5 +31,5 @@ a ggplot2 object
 }
 \description{
 Wraps \code{\link[fgsea:plotEnrichment]{fgsea::plotEnrichment()}} for a single pathway, restyled to match
-RNAflow's theme.
+AMEL's theme.
 }

@@ -1,6 +1,6 @@
-# Contributing to RNAflow
+# Contributing to AMEL
 
-Thanks for your interest in improving RNAflow! Contributions of all kinds are
+Thanks for your interest in improving AMEL! Contributions of all kinds are
 welcome — bug reports, feature ideas, documentation fixes, and code.
 
 ## Reporting bugs and requesting features
@@ -14,14 +14,14 @@ Please open an issue using the templates:
 
 ## Development setup
 
-RNAflow is a standard R package. From a clone:
+AMEL is a standard R package. From a clone:
 
 ```r
 # install.packages("devtools")
 source("dev/install_deps.R")   # one-time: CRAN + Bioconductor dependencies
 devtools::load_all()           # load the package
 devtools::test()               # run the test suite
-RNAflow::run_app()             # launch the Shiny app
+AMEL::run_app()             # launch the Shiny app
 ```
 
 A Bioconductor stack is required (DESeq2, clusterProfiler, WGCNA, GSVA, …). The
@@ -30,7 +30,7 @@ you would rather not manage the dependencies locally.
 
 ## Architecture and code style
 
-RNAflow follows a strict **pure / impure separation**:
+AMEL follows a strict **pure / impure separation**:
 
 - **Pure layer** — all analysis and figure logic lives in non-Shiny functions
   (`analysis_*`, `fig_*`, `utils_*`) and is unit-tested without Shiny.

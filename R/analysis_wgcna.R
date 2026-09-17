@@ -5,7 +5,7 @@
 #' module-trait correlation, and intramodular hub genes. No Shiny dependency.
 #'
 #' Conventions: `counts_norm` is the normalized (e.g. vst) matrix with genes
-#' in rows and samples in columns (as elsewhere in RNAflow). WGCNA wants the
+#' in rows and samples in columns (as elsewhere in AMEL). WGCNA wants the
 #' transpose, so [wgcna_datexpr()] returns a samples x genes matrix
 #' (`datExpr`) that the other functions consume.
 #'

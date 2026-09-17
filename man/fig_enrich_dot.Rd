@@ -13,7 +13,7 @@ fig_enrich_dot(
 )
 }
 \arguments{
-\item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} or \code{\link[=run_ora]{run_ora()}}}
+\item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} or \code{\link[decoupleR:run_ora]{run_ora()}}}
 
 \item{n}{number of top terms (by padj) to show}
 

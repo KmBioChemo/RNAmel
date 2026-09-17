@@ -16,7 +16,7 @@ fig_gsva_heatmap(
 )
 }
 \arguments{
-\item{scores}{a numeric matrix (gene sets x samples) from \code{\link[decoupleR:run_gsva]{decoupleR::run_gsva()}}}
+\item{scores}{a numeric matrix (gene sets x samples) from \code{\link[decoupleR:run_gsva]{run_gsva()}}}
 
 \item{metadata}{optional sample metadata (column 1 = sample)}
 
@@ -39,7 +39,7 @@ column) beside the track; when FALSE it appears only in the legend}
 a pheatmap object
 }
 \description{
-Draws the \code{\link[decoupleR:run_gsva]{decoupleR::run_gsva()}} score matrix (gene sets x samples) as a clustered
+Draws the \code{\link[decoupleR:run_gsva]{run_gsva()}} score matrix (gene sets x samples) as a clustered
 heatmap, keeping the most variable sets and optionally annotating samples by
 a metadata group.
 }

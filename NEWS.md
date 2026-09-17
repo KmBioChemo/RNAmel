@@ -1,4 +1,11 @@
-# RNAflow 0.16.7 (2026-08-05)
+# AMEL 0.16.7 (2026-08-05)
+
+## Project rename
+
+- The package and repository were renamed from **RNAflow** to **AMEL**
+  (Auditable Modular Expression Laboratory) to avoid a name clash with an
+  unrelated published Nextflow RNA-seq pipeline. The saved-project format
+  (`.rnaflow.rds`) is unchanged, so existing sessions load as before.
 
 ## Bug fixes
 
@@ -50,7 +57,7 @@
 - `R-CMD-check` now runs on pushes to `main` and across an R version matrix
   (release + oldrel-1, exercising the declared R >= 4.4 minimum).
 
-# RNAflow 0.16.6 (2026-08-04)
+# AMEL 0.16.6 (2026-08-04)
 
 ## Feature
 
@@ -63,7 +70,7 @@
   `duplicate_action = "reject"`. The app shows a notification stating how many
   gene IDs were merged.
 
-# RNAflow 0.16.5 (2026-08-02)
+# AMEL 0.16.5 (2026-08-02)
 
 ## Fix
 
@@ -83,7 +90,7 @@
   system libraries, Bioconductor dependencies, and launching the app, for users
   starting with nothing installed.
 
-# RNAflow 0.16.4 (2026-07-22)
+# AMEL 0.16.4 (2026-07-22)
 
 ## Feature
 
@@ -94,7 +101,7 @@
   landing text pointed at an `inst/extdata/` folder that does not exist after
   `install_github()`.
 
-# RNAflow 0.16.3 (2026-07-03)
+# AMEL 0.16.3 (2026-07-03)
 
 ## Change
 
@@ -103,7 +110,7 @@
   sample identifiers were illegible and the group annotation already identifies
   the columns; small cohorts still show labels.
 
-# RNAflow 0.16.2 (2026-07-03)
+# AMEL 0.16.2 (2026-07-03)
 
 ## Fix
 
@@ -111,7 +118,7 @@
   replaces (`.selectized { display:none }`), so the gene field no longer shows
   a second empty box stacked under the widget.
 
-# RNAflow 0.16.1 (2026-07-03)
+# AMEL 0.16.1 (2026-07-03)
 
 ## Fixes
 
@@ -123,7 +130,7 @@
   cached copy (the selectize dropdown fix from 0.16.0 was being masked by the
   browser cache).
 
-# RNAflow 0.16.0 (2026-07-03)
+# AMEL 0.16.0 (2026-07-03)
 
 ## UI feedback: PCA labels, all-pairwise DE, cleaner dropdowns
 
@@ -140,7 +147,7 @@
   the controls below; it is now opaque, elevated (z-index + shadow), with an
   accent hover state.
 
-# RNAflow 0.15.2 (2026-07-03)
+# AMEL 0.15.2 (2026-07-03)
 
 ## Fix
 
@@ -149,7 +156,7 @@
   (~9 MB) -- exceeded the default, so uploads failed with "Maximum upload
   size exceeded". The previous option value is restored on app stop.
 
-# RNAflow 0.15.1 (2026-07-03)
+# AMEL 0.15.1 (2026-07-03)
 
 ## Complex demo dataset
 
@@ -166,7 +173,7 @@
   NOTE -- acceptable for a GitHub-hosted demo (the package is not bound for
   CRAN).
 
-# RNAflow 0.15.0 (2026-07-03)
+# AMEL 0.15.0 (2026-07-03)
 
 ## Publication readiness & repository hygiene (no new features)
 
@@ -189,7 +196,7 @@
 - **Docs**: DESCRIPTION and README describe the full current scope and cite both
   demo datasets with their sources.
 
-# RNAflow 0.14.2 (2026-07-03)
+# AMEL 0.14.2 (2026-07-03)
 
 ## Stabilization pass (no new features)
 
@@ -213,14 +220,14 @@
   project-specific `mrl_lpr_*` source CSVs are build-ignored (not bundled demo
   data). No runtime logs or temp files are tracked.
 
-# RNAflow 0.14.1 (2026-07-03)
+# AMEL 0.14.1 (2026-07-03)
 
 ## Visual refinements & per-tab explanations
 
 - **Navbar tab icons.** Every tab gains a distinct, recessive Font Awesome icon
   (bright on the active/hovered tab) for faster orientation and a more
   product-like navbar.
-- **Unified interactive-plot typography.** New internal `rnaflow_plotly()` helper
+- **Unified interactive-plot typography.** New internal `amel_plotly()` helper
   applies the app's font (Inter) and ink colour plus a clean hover label to all
   interactive figures (volcano, PCA, UMAP, 3D PCA, linked Explore), so they read
   as one system instead of plotly defaults.
@@ -230,7 +237,7 @@
   Signatures, AI) now carry a short explanation of *why* the analysis matters
   and how to read it -- present but collapsed by default, so no clutter.
 
-# RNAflow 0.14.0 (2026-07-02)
+# AMEL 0.14.0 (2026-07-02)
 
 ## New analyses & visualizations (backlog features)
 
@@ -260,7 +267,7 @@ functions + thin module wiring). All new dependencies are Suggests and guarded.
 - **Tests.** +44 tests (embeddings, visNetwork map, gene/alluvial, GSVA):
   422 pass / 0 fail / 1 skip (shinytest2). `pkgdown::check_pkgdown()` clean.
 
-# RNAflow 0.13.0 (2026-07-02)
+# AMEL 0.13.0 (2026-07-02)
 
 ## Reproducibility, distribution, UI finish, integration tests
 
@@ -286,11 +293,11 @@ functions + thin module wiring). All new dependencies are Suggests and guarded.
 - **Tests.** 378 pass / 0 fail / 1 skip (the shinytest2 test, without a
   browser). `R CMD check` clean; `pkgdown::check_pkgdown()` clean.
 
-# RNAflow 0.12.0 (2026-07-02)
+# AMEL 0.12.0 (2026-07-02)
 
 ## Professional UI / visual overhaul (no new analyses)
 
-A design-system pass to make RNAflow look and feel like a polished scientific
+A design-system pass to make AMEL look and feel like a polished scientific
 platform. No biological analyses, tabs, or statistics changed.
 
 - **Assets now actually load.** `inst/app/www` was never registered as a Shiny
@@ -320,7 +327,7 @@ platform. No biological analyses, tabs, or statistics changed.
   headless with the stylesheet served (verified), `pkgdown::check_pkgdown()`
   clean.
 
-# RNAflow 0.11.4 (2026-07-02)
+# AMEL 0.11.4 (2026-07-02)
 
 ## Bug-fix pass (multi-agent code review, no new features)
 
@@ -366,7 +373,7 @@ platform. No biological analyses, tabs, or statistics changed.
 - **Tests.** 364 pass / 0 fail / 0 skip on R 4.5.2 / Bioconductor 3.22 (Activity
   tests run for real -- decoupleR + OmnipathR available).
 
-# RNAflow 0.11.3 (2026-07-02)
+# AMEL 0.11.3 (2026-07-02)
 
 ## Consolidation pass (stabilization, no new features)
 
@@ -390,7 +397,7 @@ platform. No biological analyses, tabs, or statistics changed.
   a synthetic pathway network, plus project-state tests for the new slots and
   backward compatibility (351 tests pass; full `R CMD check` clean).
 
-# RNAflow 0.11.2 (2026-07-02)
+# AMEL 0.11.2 (2026-07-02)
 
 ## Activity inference: honest errors + declared OmnipathR dependency
 
@@ -411,7 +418,7 @@ platform. No biological analyses, tabs, or statistics changed.
   Bioconductor annotation packages (e.g. `reactome.db`, ~455 MB) fetch reliably
   on a fresh machine.
 
-# RNAflow 0.11.1 (2026-07-01)
+# AMEL 0.11.1 (2026-07-01)
 
 ## Robust activity-network fetching
 
@@ -422,7 +429,7 @@ platform. No biological analyses, tabs, or statistics changed.
   pathway activity on the airway demo recovers the expected steroid /
   anti-inflammatory signal (Androgen up; NFkB / TNFa / JAK-STAT down).
 
-# RNAflow 0.11.0 (2026-07-01)
+# AMEL 0.11.0 (2026-07-01)
 
 ## Linked interactive explorer (crosstalk)
 
@@ -435,7 +442,7 @@ platform. No biological analyses, tabs, or statistics changed.
   and `fig_linked_volcano()` are Shiny-free and tested.
 - `crosstalk` added to `Imports` (already pulled in by \pkg{plotly}).
 
-# RNAflow 0.10.0 (2026-07-01)
+# AMEL 0.10.0 (2026-07-01)
 
 ## TF & pathway activity inference (decoupleR)
 
@@ -451,7 +458,7 @@ platform. No biological analyses, tabs, or statistics changed.
   reach OmniPath. Networks are cached per session.
 - `decoupleR` added to `Suggests` (guarded with a clear install message).
 
-# RNAflow 0.9.1 (2026-07-01)
+# AMEL 0.9.1 (2026-07-01)
 
 ## AI narrative in the HTML report
 
@@ -461,7 +468,7 @@ platform. No biological analyses, tabs, or statistics changed.
   section, so a saved/exported report carries the interpretation alongside the
   reproducible script.
 
-# RNAflow 0.9.0 (2026-07-01)
+# AMEL 0.9.0 (2026-07-01)
 
 ## AI-assisted biological interpretation
 
@@ -481,7 +488,7 @@ platform. No biological analyses, tabs, or statistics changed.
 - **Model choice.** Claude Opus 4.8 (default), Sonnet 5, or Haiku 4.5, with a
   live token/cost estimate. `httr2` added to `Suggests`.
 
-# RNAflow 0.8.1 (2026-07-01)
+# AMEL 0.8.1 (2026-07-01)
 
 ## "Restrict to active contrast" on Heatmap and PCA
 
@@ -492,7 +499,7 @@ platform. No biological analyses, tabs, or statistics changed.
   the model on all samples for dispersion, while you can choose whether the
   visualizations display the whole dataset or just the compared groups.
 
-# RNAflow 0.8.0 (2026-07-01)
+# AMEL 0.8.0 (2026-07-01)
 
 ## QC diagnostics, gene-ID auto-mapping, Methods generator
 
@@ -507,7 +514,7 @@ platform. No biological analyses, tabs, or statistics changed.
   of the analysis naming the tools, their versions, and the exact parameters
   used -- downloadable from the Report tab, ready to adapt for a manuscript.
 
-# RNAflow 0.7.3 (2026-07-01)
+# AMEL 0.7.3 (2026-07-01)
 
 ## Real published demo dataset (airway)
 
@@ -522,7 +529,7 @@ platform. No biological analyses, tabs, or statistics changed.
 - `airway` is only used by the (build-ignored) generator script, so it is not
   a package dependency.
 
-# RNAflow 0.7.2 (2026-07-01)
+# AMEL 0.7.2 (2026-07-01)
 
 ## Audit polish
 
@@ -539,7 +546,7 @@ platform. No biological analyses, tabs, or statistics changed.
 - **`generate_r_script()` header** now states that enrichment / WGCNA use the
   recorded settings when available and example defaults otherwise.
 
-# RNAflow 0.7.1 (2026-07-01)
+# AMEL 0.7.1 (2026-07-01)
 
 ## Exact reproducibility & remaining audit items
 
@@ -555,7 +562,7 @@ platform. No biological analyses, tabs, or statistics changed.
 - **GSEA ties.** `run_gsea()` warns when the ranking metric has tied values
   (and muffles fgsea's redundant internal warning).
 
-# RNAflow 0.7.0 (2026-07-01)
+# AMEL 0.7.0 (2026-07-01)
 
 ## Methodological fixes (scientific audit)
 
@@ -581,7 +588,7 @@ platform. No biological analyses, tabs, or statistics changed.
   the HTML report now embeds full `sessionInfo()`. Both clarify that
   downstream (enrichment/WGCNA) steps use default parameters.
 
-# RNAflow 0.6.2 (2026-07-01)
+# AMEL 0.6.2 (2026-07-01)
 
 ## Stabilization & pre-release polish
 
@@ -598,7 +605,7 @@ platform. No biological analyses, tabs, or statistics changed.
 - No new features, dependencies, or breaking changes; project file format is
   unchanged (backward compatible).
 
-# RNAflow 0.6.1 (2026-07-01)
+# AMEL 0.6.1 (2026-07-01)
 
 ## Module enrichment visualizations (WGCNA)
 
@@ -612,7 +619,7 @@ platform. No biological analyses, tabs, or statistics changed.
   selected module ("This module") and a cross-module comparison
   ("All modules"), in addition to the table. New Suggests: ggtext.
 
-# RNAflow 0.6.0 (2026-07-01)
+# AMEL 0.6.0 (2026-07-01)
 
 ## Additional visualizations
 
@@ -632,7 +639,7 @@ platform. No biological analyses, tabs, or statistics changed.
   network) and **Volcano** (glow) tabs.
 - New Suggests: ggraph, igraph, tidygraph, ggridges, scico.
 
-# RNAflow 0.5.1 (2026-07-01)
+# AMEL 0.5.1 (2026-07-01)
 
 ## Quality pass — clean `R CMD check`
 
@@ -649,17 +656,17 @@ NOTE is an environment "unable to verify current time" artifact).
   shinyjs, S4Vectors); pruned unused Suggests.
 - **Fixes**: `importFrom(utils, head, tail)`; corrected a broken Rd
   cross-reference; `.Rbuildignore` for `dev/`, `LICENSE.md`;
-  fixed the GitHub owner in URLs (`KmBioChemo/RNAflow`); cleaned the
+  fixed the GitHub owner in URLs (`KmBioChemo/AMEL`); cleaned the
   author record.
 
-# RNAflow 0.5.0 (2026-07-01)
+# AMEL 0.5.0 (2026-07-01)
 
 ## Phase 5 — Reproducibility (roadmap complete)
 
 - **Reproducible R script export** (`generate_r_script()`): turns a session
   into a runnable, commented .R script that reproduces the whole pipeline
   (load → DESeq2 per contrast → figures → GSEA/ORA → WGCNA → sessionInfo)
-  with RNAflow's public API — ready for a Methods section. The output is
+  with AMEL's public API — ready for a Methods section. The output is
   guaranteed to parse.
 - **Self-contained HTML report** (`build_report_html()`): a single-file
   report with parameters, a DE summary table, per-contrast volcanoes and the
@@ -672,7 +679,7 @@ NOTE is an environment "unable to verify current time" artifact).
 - Note: in place of a full `renv` lockfile (renv not present), the report
   embeds a package-version manifest capturing the analysis environment.
 
-# RNAflow 0.4.0 (2026-06-30)
+# AMEL 0.4.0 (2026-06-30)
 
 ## Phase 4 — WGCNA co-expression networks
 
@@ -694,7 +701,7 @@ NOTE is an environment "unable to verify current time" artifact).
   module, and the batch effect isolated into grey.
 - Added `WGCNA` (BiocManager) to the environment.
 
-# RNAflow 0.3.1 (2026-06-30)
+# AMEL 0.3.1 (2026-06-30)
 
 ## Enrichment UX
 
@@ -703,7 +710,7 @@ NOTE is an environment "unable to verify current time" artifact).
   annotation, it shows a clear message pointing to the Organism setting on
   the Data tab instead of silently returning zero enriched terms.
 
-# RNAflow 0.3.0 (2026-06-30)
+# AMEL 0.3.0 (2026-06-30)
 
 ## Phase 3 — Functional enrichment
 
@@ -724,7 +731,7 @@ NOTE is an environment "unable to verify current time" artifact).
   responses, OXPHOS, E2F), so the whole pipeline — DE → multi-contrast →
   enrichment — tells one coherent inflammation/rescue story.
 
-# RNAflow 0.2.0 (2026-06-30)
+# AMEL 0.2.0 (2026-06-30)
 
 ## Phase 2 — Project manager + multi-contrast
 
@@ -746,7 +753,7 @@ NOTE is an environment "unable to verify current time" artifact).
   family and the `save_compare()` exporter.
 - Added `eulerr` (Suggests) and `grid` (Imports) dependencies.
 
-# RNAflow 0.1.2 (2026-06-30)
+# AMEL 0.1.2 (2026-06-30)
 
 ## Bug fixes
 - Eliminate `Error in &&: 'length = 2000' in coercion to 'logical(1)'`
@@ -757,7 +764,7 @@ NOTE is an environment "unable to verify current time" artifact).
 - Harden `%||%` to handle NULL, empty, NA, and non-finite numerics
   uniformly; leave longer vectors alone.
 
-# RNAflow 0.1.1 (2026-06-30)
+# AMEL 0.1.1 (2026-06-30)
 
 ## Bug fixes
 - Fix `'length = N' in coercion to 'logical(1)'` warnings in the Volcano
@@ -769,7 +776,7 @@ NOTE is an environment "unable to verify current time" artifact).
   falls back to `"normal"` shrinkage with an informative message instead
   of throwing.
 
-# RNAflow 0.1.0 (2026-06-30)
+# AMEL 0.1.0 (2026-06-30)
 
 Initial package-structured release. Refactor of the original `app.R`
 single-file Shiny app into a modular R package:

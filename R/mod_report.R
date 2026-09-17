@@ -20,7 +20,7 @@ mod_report_ui <- function(id) {
         bslib::card_body(
           shiny::p(shiny::tags$small(
             "A runnable .R script that reproduces the whole pipeline ",
-            "(DE, comparison, enrichment, network) with RNAflow's API -- ",
+            "(DE, comparison, enrichment, network) with AMEL's API -- ",
             "ready for a Methods section.")),
           shiny::downloadButton(ns("dl_script"), "Download .R script",
                                 class = "btn btn-primary btn-sm")
@@ -81,7 +81,7 @@ mod_report_server <- function(id, data_mod, contrast_store,
 
     project <- shiny::reactive({
       assemble_project(
-        name      = "RNAflow analysis",
+        name      = "AMEL analysis",
         organism  = data_mod$organism(),
         counts    = data_mod$counts(),
         metadata  = data_mod$metadata(),
@@ -100,7 +100,7 @@ mod_report_server <- function(id, data_mod, contrast_store,
     })
 
     output$dl_methods <- shiny::downloadHandler(
-      filename = function() "rnaflow_methods.txt",
+      filename = function() "amel_methods.txt",
       content  = function(file) {
         writeLines(generate_methods_text(project()), file)
       }
@@ -116,14 +116,14 @@ mod_report_server <- function(id, data_mod, contrast_store,
     output$manifest <- shiny::renderTable(session_manifest())
 
     output$dl_script <- shiny::downloadHandler(
-      filename = function() "rnaflow_analysis.R",
+      filename = function() "amel_analysis.R",
       content  = function(file) {
         writeLines(generate_r_script(project(), generated = stamp()), file)
       }
     )
 
     output$dl_html <- shiny::downloadHandler(
-      filename = function() "rnaflow_report.html",
+      filename = function() "amel_report.html",
       content  = function(file) {
         shiny::withProgress(message = "Building report...", value = 0.4, {
           build_report_html(project(), file, generated = stamp())

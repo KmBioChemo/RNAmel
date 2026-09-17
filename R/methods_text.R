@@ -126,9 +126,9 @@ generate_methods_text <- function(project) {
   }
 
   rnaflow_lbl <- if (!is.null(project$rnaflow_version))
-    sprintf(" (v%s)", project$rnaflow_version) else pkg_ver("RNAflow")
+    sprintf(" (v%s)", project$rnaflow_version) else pkg_ver("AMEL")
   footer <- sprintf(
-    paste0("Analyses were carried out in R (v%s) with RNAflow%s; the reported ",
+    paste0("Analyses were carried out in R (v%s) with AMEL%s; the reported ",
            "software versions reflect the environment at the time this Methods ",
            "text was generated, which may differ from the original analysis ",
            "session."),

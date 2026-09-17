@@ -4,7 +4,7 @@
 \alias{report}
 \title{Standalone HTML analysis report}
 \description{
-Builds a self-contained HTML report of an RNAflow session using
+Builds a self-contained HTML report of an AMEL session using
 \pkg{htmltools} -- figures are embedded as base64 data URIs, so the file
 needs no external assets and no pandoc / Quarto toolchain. Fast, dependable
 figures (DE volcanoes, cross-contrast comparison) are rendered inline; the

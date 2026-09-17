@@ -1,6 +1,6 @@
-#' RNAflow: downstream bulk RNA-seq analysis platform
+#' AMEL: downstream bulk RNA-seq analysis platform
 #'
-#' RNAflow is a modular Shiny application packaged as an R package for
+#' AMEL is a modular Shiny application packaged as an R package for
 #' downstream bulk RNA-seq analysis. It takes raw count matrices and
 #' sample metadata as input and provides:
 #'
@@ -16,11 +16,11 @@
 #'
 #' Supports human, mouse and rat organisms.
 #'
-#' To launch the app: `RNAflow::run_app()`
+#' To launch the app: `AMEL::run_app()`
 #'
 #' @docType package
-#' @name RNAflow-package
-#' @aliases RNAflow
+#' @name AMEL-package
+#' @aliases AMEL
 "_PACKAGE"
 
 #' Pipe operator
@@ -37,6 +37,6 @@ NULL
 #'
 #' @importFrom rlang .data
 #' @importFrom utils head tail
-#' @name rnaflow-internal
+#' @name amel-internal
 #' @keywords internal
 NULL

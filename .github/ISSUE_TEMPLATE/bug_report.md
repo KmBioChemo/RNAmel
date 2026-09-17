@@ -13,7 +13,7 @@ Steps or a minimal reproducible example. Ideally a small counts + metadata
 snippet and the exact call / UI action:
 
 ```r
-library(RNAflow)
+library(AMEL)
 # ...
 ```
 

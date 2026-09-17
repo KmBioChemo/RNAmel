@@ -32,5 +32,5 @@ module records its parameters under \verb{$wgcna} for reproducibility}
 \description{
 Shiny module wrapping the \link{analysis_wgcna} layer: soft-threshold picking,
 module detection, module-trait correlation, hub genes, eigengene profiles,
-and per-module pathway enrichment (reusing \code{\link[=run_ora]{run_ora()}} from phase 3).
+and per-module pathway enrichment (reusing \code{\link[decoupleR:run_ora]{run_ora()}} from phase 3).
 }

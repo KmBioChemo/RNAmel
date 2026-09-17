@@ -16,7 +16,7 @@
 #' @keywords internal
 NULL
 
-# RNAflow organism keyword -> decoupleR organism string.
+# AMEL organism keyword -> decoupleR organism string.
 decoupler_organism <- function(organism) {
   key <- tolower(trimws(organism %||% "human"))
   if (!key %in% c("human", "mouse", "rat")) {
@@ -46,7 +46,7 @@ activity_input <- function(de, by = "stat") {
 # were generated. Returns NULL when the file is missing or unreadable so the
 # caller can decide how to report the failure.
 load_bundled_network <- function(name) {
-  f <- system.file("extdata", name, package = "RNAflow")
+  f <- system.file("extdata", name, package = "AMEL")
   if (!nzchar(f) || !file.exists(f)) {
     return(NULL)
   }

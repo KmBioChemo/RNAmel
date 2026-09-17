@@ -84,7 +84,7 @@ theme_exploration <- function(base_size = 13) {
     )
 }
 
-#' Apply consistent RNAflow styling to an interactive (plotly) figure
+#' Apply consistent AMEL styling to an interactive (plotly) figure
 #'
 #' Sets the app's font family and ink colour globally on the widget plus a
 #' clean hover label, so every interactive plot (volcano, PCA, UMAP, 3D, ...)
@@ -94,7 +94,7 @@ theme_exploration <- function(base_size = 13) {
 #' @param fig a plotly object
 #' @return the plotly object, restyled
 #' @keywords internal
-rnaflow_plotly <- function(fig) {
+amel_plotly <- function(fig) {
   fam <- paste("Inter, -apple-system, 'Segoe UI', Roboto, Helvetica,",
                "Arial, sans-serif")
   plotly::layout(

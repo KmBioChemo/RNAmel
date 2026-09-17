@@ -2,7 +2,7 @@
 % Please edit documentation in R/app.R
 \name{app_server}
 \alias{app_server}
-\title{RNAflow main server}
+\title{AMEL main server}
 \usage{
 app_server(input, output, session)
 }
@@ -10,6 +10,6 @@ app_server(input, output, session)
 \item{input, output, session}{standard Shiny server args}
 }
 \description{
-RNAflow main server
+AMEL main server
 }
 \keyword{internal}

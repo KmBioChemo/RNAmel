@@ -5,7 +5,7 @@
 #' Without this the `<link>` in [app_ui()] would 404 and none of the app's
 #' styling would load.
 #'
-#' @name rnaflow-package-hooks
+#' @name amel-package-hooks
 #' @keywords internal
 NULL
 
