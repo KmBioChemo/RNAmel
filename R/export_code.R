@@ -192,12 +192,32 @@ generate_r_script <- function(project,
         "fig_gsva_heatmap(scores, meta)", "")
   }
 
-  add("## 7. Not reproduced automatically -------------------------------------",
-      "# Regulator / pathway activity (decoupleR) and AI-assisted interpretation",
-      "# are available interactively in the app but are not emitted in this",
-      "# script; re-run them there if you need them.",
+  # ---- Regulator / pathway activity (decoupleR): exact settings when recorded ----
+  add("## 7. Regulator / pathway activity (decoupleR) --------------------------",
+      "# NOTE: activity inference uses gene symbols; ensure the DE table's genes",
+      "#       are symbols to reproduce this exactly.")
+  ac <- project$activity
+  if (is.list(ac) && length(ac) && !is.null(ac$type)) {
+    is_tf <- identical(ac$type, "tf")
+    add(sprintf("network  <- %s",
+                if (is_tf) "get_tf_network(organism)" else "get_pathway_network(organism)"),
+        sprintf('activity <- run_activity(%s, network, method = "%s", mor_col = "%s", by = "%s")',
+                ex, ac$method %||% (if (is_tf) "ulm" else "mlm"),
+                if (is_tf) "mor" else "weight", ac$rank_by %||% "stat"),
+        "fig_activity_bar(activity)", "")
+  } else {
+    add("# (no activity run recorded -- example: transcription-factor activity)",
+        "network  <- get_tf_network(organism)",
+        sprintf('activity <- run_activity(%s, network, method = "ulm", mor_col = "mor", by = "stat")', ex),
+        "fig_activity_bar(activity)", "")
+  }
+
+  add("## 8. Not reproduced automatically -------------------------------------",
+      "# The optional AI-assisted interpretation is not emitted here: it calls an",
+      "# external large-language-model API and is non-deterministic, so it is not",
+      "# part of the reproducible script. Re-run it interactively if needed.",
       "",
-      "## 8. Session information -----------------------------------------------",
+      "## 9. Session information -----------------------------------------------",
       "sessionInfo()",
       "")
 

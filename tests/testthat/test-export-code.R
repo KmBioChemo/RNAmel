@@ -62,7 +62,9 @@ test_that("uploaded contrasts define a real object and figures anchor on a compu
   expect_silent(parse(text = code))
   expect_match(code, "read_de_results(", fixed = TRUE)              # object defined
   expect_match(code, "fig_volcano(res_cond_X_vs_C", fixed = TRUE)   # computed contrast
-  expect_match(code, "not emitted in this", fixed = TRUE)           # activity/AI note
+  expect_match(code, "run_activity(", fixed = TRUE)                 # activity now exported
+  expect_match(code, "get_tf_network(organism)", fixed = TRUE)
+  expect_match(code, "AI-assisted interpretation is not emitted here", fixed = TRUE)  # AI only
 })
 
 test_that("distinct labels that sanitise alike get unique object names", {
