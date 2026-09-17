@@ -1,6 +1,6 @@
 Package: AMEL
 Title: Auditable Modular Expression Laboratory (AMEL): An Integrated R/Shiny Platform for Reproducible Bulk RNA-Seq Analysis and Interpretation
-Version: 0.16.7
+Version: 0.17.0
 Authors@R: c(
     person("Tamara", "Pfanner", role = "aut",
            comment = "Equal contribution"),

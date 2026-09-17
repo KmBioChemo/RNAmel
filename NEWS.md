@@ -1,4 +1,4 @@
-# AMEL 0.16.7 (2026-08-05)
+# AMEL 0.17.0 (2026-09-17)
 
 ## Project rename
 
@@ -6,6 +6,14 @@
   (Auditable Modular Expression Laboratory) to avoid a name clash with an
   unrelated published Nextflow RNA-seq pipeline. The saved-project format
   (`.rnaflow.rds`) is unchanged, so existing sessions load as before.
+
+## New features
+
+- The reproducible R script export now emits a regulator / pathway activity
+  step (decoupleR `run_activity()` with `get_tf_network()` /
+  `get_pathway_network()`), reflecting the settings recorded in the session.
+
+# AMEL 0.16.7 (2026-08-05)
 
 ## Bug fixes
 
