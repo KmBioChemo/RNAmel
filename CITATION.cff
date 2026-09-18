@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use RNAmel, please cite it using this metadata."
-title: "RNAmel: an RNA Modular Expression Laboratory for reproducible bulk RNA-seq analysis and interpretation"
+title: "RNA Modular Expression Laboratory (RNAmel): an integrated R/Shiny platform for reproducible bulk RNA-seq analysis and interpretation"
 type: software
 authors:
   - family-names: Pfanner

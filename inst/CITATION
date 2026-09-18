@@ -2,7 +2,7 @@ citHeader("To cite RNAmel in publications use:")
 
 bibentry(
   bibtype = "Manual",
-  title   = "RNAmel: an RNA Modular Expression Laboratory for reproducible bulk RNA-seq analysis and interpretation",
+  title   = "RNA Modular Expression Laboratory (RNAmel): an integrated R/Shiny platform for reproducible bulk RNA-seq analysis and interpretation",
   author  = c(person("Tamara", "Pfanner"),
               person("Rafael P.", "Silveira"),
               person("Matthias P.", "Wymann"),
