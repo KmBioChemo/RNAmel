@@ -1,6 +1,6 @@
 #' Project state management
 #'
-#' Save and restore complete AMEL analysis sessions. A project bundles
+#' Save and restore complete RNAmel analysis sessions. A project bundles
 #' the input data, all parameters, and results into a single .rds file
 #' that can be reopened later or shared with collaborators.
 #'
@@ -18,7 +18,7 @@ empty_project <- function(name = "untitled") {
     name        = name,
     created_at  = Sys.time(),
     modified_at = Sys.time(),
-    rnaflow_version = utils::packageVersion("AMEL"),
+    rnaflow_version = utils::packageVersion("RNAmel"),
     organism    = NA_character_,        # "human" / "mouse" / "rat"
     counts      = NULL,                 # numeric matrix
     metadata    = NULL,                 # data.frame
@@ -64,10 +64,10 @@ load_project <- function(path) {
                   error = function(e) stop("Could not read project: ",
                                            conditionMessage(e), call. = FALSE))
   if (!is.list(obj) || !"rnaflow_version" %in% names(obj)) {
-    stop("File does not look like a valid AMEL project.", call. = FALSE)
+    stop("File does not look like a valid RNAmel project.", call. = FALSE)
   }
   # Backfill any slots added in newer versions so projects saved by older
-  # AMEL releases load with the canonical structure (missing fields take
+  # RNAmel releases load with the canonical structure (missing fields take
   # their empty-project defaults rather than being absent).
   defaults <- empty_project(obj$name %||% "untitled")
   for (k in setdiff(names(defaults), names(obj))) obj[[k]] <- defaults[[k]]
@@ -148,7 +148,7 @@ contrast_store_upsert <- function(store, label, results, params = list(),
 #' @keywords internal
 rnaflow_recent_dir <- function() {
   dir <- getOption("rnaflow.recent_dir",
-                   tools::R_user_dir("AMEL", "data"))
+                   tools::R_user_dir("RNAmel", "data"))
   dir <- file.path(dir, "projects")
   if (!dir.exists(dir)) dir.create(dir, recursive = TRUE, showWarnings = FALSE)
   dir

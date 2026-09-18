@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use AMEL, please cite it using this metadata."
-title: "The Auditable Modular Expression Laboratory (AMEL): an integrated R/Shiny platform for reproducible bulk RNA-seq analysis and interpretation"
+message: "If you use RNAmel, please cite it using this metadata."
+title: "RNAmel: an RNA Modular Expression Laboratory for reproducible bulk RNA-seq analysis and interpretation"
 type: software
 authors:
   - family-names: Pfanner
@@ -17,10 +17,10 @@ authors:
     email: karim.matmat@unibas.ch
     orcid: "https://orcid.org/0009-0009-8226-4846"
     affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
-repository-code: "https://github.com/KmBioChemo/AMEL"
-url: "https://KmBioChemo.github.io/AMEL/"
+repository-code: "https://github.com/KmBioChemo/RNAmel"
+url: "https://KmBioChemo.github.io/RNAmel/"
 abstract: >-
-  AMEL is a modular Shiny application packaged as an R package for
+  RNAmel is a modular Shiny application packaged as an R package for
   downstream bulk RNA-seq analysis. From a raw count matrix and sample
   metadata it provides differential expression (DESeq2), quality-control
   diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked
@@ -39,10 +39,10 @@ keywords:
   - R
   - reproducibility
 license: MIT
-version: 0.17.0
+version: 0.18.0
 doi: 10.5281/zenodo.21493110
 identifiers:
   - type: doi
     value: 10.5281/zenodo.21493110
     description: "Archived software on Zenodo (concept DOI; always resolves to the latest version)"
-date-released: "2026-09-17"
+date-released: "2026-09-18"

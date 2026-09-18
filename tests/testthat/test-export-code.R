@@ -25,7 +25,7 @@ test_that("generated script is syntactically valid R", {
 
 test_that("script reflects the stored contrasts and organism", {
   code <- generate_r_script(make_project(2), counts_path = "my_counts.csv")
-  expect_match(code, "library(AMEL)", fixed = TRUE)
+  expect_match(code, "library(RNAmel)", fixed = TRUE)
   expect_match(code, 'read_counts("my_counts.csv")', fixed = TRUE)
   expect_match(code, 'organism <- "mouse"', fixed = TRUE)
   expect_match(code, 'contrast = c("group", "WT_LPS", "WT_Veh")', fixed = TRUE)

@@ -1,23 +1,23 @@
-# AMEL
+# RNAmel
 
 <!-- badges: start -->
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21493110.svg)](https://doi.org/10.5281/zenodo.21493110)
-[![R-CMD-check](https://github.com/KmBioChemo/AMEL/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/KmBioChemo/AMEL/actions/workflows/R-CMD-check.yaml)
-[![pkgdown](https://github.com/KmBioChemo/AMEL/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/KmBioChemo/AMEL/actions/workflows/pkgdown.yaml)
+[![R-CMD-check](https://github.com/KmBioChemo/RNAmel/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/KmBioChemo/RNAmel/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/KmBioChemo/RNAmel/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/KmBioChemo/RNAmel/actions/workflows/pkgdown.yaml)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
 > Downstream bulk RNA-seq analysis platform — interactive Shiny app, packaged as an R package.
 
-**AMEL** is a modular Shiny application built as a proper R package for downstream bulk RNA-seq analysis. It takes raw count matrices and sample metadata as input and provides differential expression (DESeq2), QC diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked volcano-table explorer, multi-contrast comparisons, functional enrichment (GSEA / ORA, with an interactive enrichment network), co-expression network analysis (WGCNA), transcription-factor and pathway activity inference (decoupleR), per-sample gene-set signatures (GSVA / ssGSEA), optional AI-assisted interpretation, publication-ready figures, and reproducible R-script / HTML report / Methods-paragraph export.
+**RNAmel** is a modular Shiny application built as a proper R package for downstream bulk RNA-seq analysis. It takes raw count matrices and sample metadata as input and provides differential expression (DESeq2), QC diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked volcano-table explorer, multi-contrast comparisons, functional enrichment (GSEA / ORA, with an interactive enrichment network), co-expression network analysis (WGCNA), transcription-factor and pathway activity inference (decoupleR), per-sample gene-set signatures (GSVA / ssGSEA), optional AI-assisted interpretation, publication-ready figures, and reproducible R-script / HTML report / Methods-paragraph export.
 
 Supported organisms: **human**, **mouse**, **rat**.
 
 ## Contents
 
 - [Gallery](#gallery)
-- [Why AMEL?](#why-rnaflow)
+- [Why RNAmel?](#why-rnaflow)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Input formats](#input-formats)
@@ -47,7 +47,7 @@ direction of change per contrast, on the 8-cancer-type TCGA demo.
 
 ![Multi-contrast comparison](man/figures/gallery-multi-contrast.png)
 
-**Consistency & regression checks** — AMEL reproduces its own results
+**Consistency & regression checks** — RNAmel reproduces its own results
 exactly (round-trip through the exported R script), all-pairwise contrasts
 match a single shared fit, and fold changes concord with limma-voom on the
 *airway* demo. These are internal consistency and regression checks, not a
@@ -55,9 +55,9 @@ general validation of the underlying statistical methods.
 
 ![Consistency checks](man/figures/gallery-validation.png)
 
-## Why AMEL?
+## Why RNAmel?
 
-Downstream RNA-seq analysis is often done either with bespoke scripts — flexible, but written for a single project and harder to reuse and audit — or with interactive applications that prioritise ease of use. AMEL aims to combine both: an interactive interface backed by a tested, reusable R package, with:
+Downstream RNA-seq analysis is often done either with bespoke scripts — flexible, but written for a single project and harder to reuse and audit — or with interactive applications that prioritise ease of use. RNAmel aims to combine both: an interactive interface backed by a tested, reusable R package, with:
 
 - Clean module separation (UI + server per feature)
 - Pure function layer (figures and analyses testable without Shiny)
@@ -78,19 +78,19 @@ Downstream RNA-seq analysis is often done either with bespoke scripts — flexib
 if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")
 if (!require("devtools",    quietly = TRUE)) install.packages("devtools")
 
-# Then install AMEL (see "Bioconductor dependencies" below for the heavy deps):
-devtools::install_github("KmBioChemo/AMEL")
+# Then install RNAmel (see "Bioconductor dependencies" below for the heavy deps):
+devtools::install_github("KmBioChemo/RNAmel")
 ```
 
 Or, from a local clone:
 
 ```r
-devtools::install_local("path/to/AMEL")
+devtools::install_local("path/to/RNAmel")
 ```
 
 ### Bioconductor dependencies
 
-AMEL uses several Bioconductor packages. Install them first:
+RNAmel uses several Bioconductor packages. Install them first:
 
 ```r
 if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")
@@ -110,7 +110,7 @@ steps 1–3 once per computer.
 
 #### 1. Install R
 
-R is the language AMEL runs on. Download the latest R (4.4 or newer) for
+R is the language RNAmel runs on. Download the latest R (4.4 or newer) for
 your operating system from **<https://cran.r-project.org/>** and run the
 installer with the default options.
 
@@ -166,8 +166,8 @@ BiocManager::install(c(
   "decoupleR", "OmnipathR"
 ))
 
-# c) AMEL itself (pulls in the remaining CRAN packages automatically)
-devtools::install_github("KmBioChemo/AMEL")
+# c) RNAmel itself (pulls in the remaining CRAN packages automatically)
+devtools::install_github("KmBioChemo/RNAmel")
 ```
 
 > If you are asked *"Do you want to install from sources the packages which
@@ -176,14 +176,14 @@ devtools::install_github("KmBioChemo/AMEL")
 #### 5. Launch the app
 
 ```r
-library(AMEL)
+library(RNAmel)
 run_app()
 ```
 
-Your web browser opens with AMEL running locally. Load the bundled demo
+Your web browser opens with RNAmel running locally. Load the bundled demo
 data (see [Demo datasets](#demo-datasets)) to try it immediately.
 
-> **Note on activity inference (TF / pathway):** AMEL ships offline copies of
+> **Note on activity inference (TF / pathway):** RNAmel ships offline copies of
 > the human CollecTRI and PROGENy networks, so transcription-factor and pathway
 > activity work for human even when the OmniPath web service is down — no
 > `OmnipathR` needed. The `decoupleR` package is still required to do the
@@ -196,14 +196,14 @@ data (see [Demo datasets](#demo-datasets)) to try it immediately.
 ### Launch the app
 
 ```r
-library(AMEL)
+library(RNAmel)
 run_app()
 ```
 
 ### Run with Docker (reproducible)
 
 The bundled `Dockerfile` fixes the R / Bioconductor release (R 4.5 /
-Bioconductor 3.22) and system environment AMEL is built against, so the heavy
+Bioconductor 3.22) and system environment RNAmel is built against, so the heavy
 Bioconductor dependency stack resolves reliably — the recommended way to share,
 deploy, or reproduce an environment.
 
@@ -218,10 +218,10 @@ For byte-for-byte package pinning on top of the container, generate an optional
 
 ### Programmatic API
 
-You can also use AMEL's core functions outside the app, for scripted pipelines:
+You can also use RNAmel's core functions outside the app, for scripted pipelines:
 
 ```r
-library(AMEL)
+library(RNAmel)
 
 # 1. Read and validate inputs
 counts <- read_counts("counts.csv")
@@ -284,23 +284,23 @@ Bioconductor sources):
 - **Phase 5** ✅ — Self-contained HTML report + reproducible R script export for Methods
 - **Phase 6** ✅ (2026) — Linked volcano-table explorer, activity inference (decoupleR TF / pathway), AI-assisted interpretation, per-sample signatures (GSVA / ssGSEA), UMAP + interactive 3D PCA, interactive enrichment network (visNetwork), distribution figures (raincloud / beeswarm / alluvial), professional UI design system, and a reproducible Docker image
 
-Phases 1–6 are delivered, so AMEL is feature-complete for its intended
+Phases 1–6 are delivered, so RNAmel is feature-complete for its intended
 scope (downstream analysis of a bulk RNA-seq count matrix). Active
 development now focuses on maintenance, reproducibility, and reviewer
 feedback rather than new major features.
 
 **API stability.** The exported functions documented on the
-[package website](https://KmBioChemo.github.io/AMEL/) are the supported
+[package website](https://KmBioChemo.github.io/RNAmel/) are the supported
 programmatic interface; we aim to avoid breaking changes to them within a
 minor-version series. Unexported internal helpers may change at any time.
 
 ## Limitations
 
-AMEL is an exploratory analysis platform, not a turnkey pipeline or a
+RNAmel is an exploratory analysis platform, not a turnkey pipeline or a
 substitute for expert statistical review. In particular:
 
 - **Bulk RNA-seq only.** It is not designed for single-cell or spatial data.
-- **No read processing.** AMEL starts from a count matrix; it does not
+- **No read processing.** RNAmel starts from a count matrix; it does not
   perform FASTQ alignment or transcript quantification (use e.g. STAR /
   Salmon / featureCounts upstream).
 - **Not a replacement for expert statistical review.** Design choices,

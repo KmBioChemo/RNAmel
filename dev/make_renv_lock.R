@@ -2,7 +2,7 @@
 # versions currently installed. Run this deliberately (it activates renv on the
 # project, adding renv/ and an .Rprofile that changes how R loads here).
 #
-# Reproducibility strategy for AMEL:
+# Reproducibility strategy for RNAmel:
 #   * PRIMARY  -> the Dockerfile pins the platform (R 4.5 / Bioconductor 3.22 +
 #     system libs). This alone is enough for a Bioconductor-heavy app and is the
 #     recommended path for sharing / deployment.

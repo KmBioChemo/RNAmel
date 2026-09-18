@@ -1,6 +1,6 @@
 # data-raw/make_networks.R
 #
-# Regenerate the offline prior-knowledge networks bundled with AMEL:
+# Regenerate the offline prior-knowledge networks bundled with RNAmel:
 #
 #   inst/extdata/collectri_human.rds   CollecTRI TF regulons  (source, target, mor)
 #   inst/extdata/progeny_human.rds     PROGENy pathway footprints

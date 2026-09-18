@@ -203,14 +203,14 @@ mod_ai_server <- function(id, de_reactive, enrich_reactive = NULL,
     })
 
     output$dl <- shiny::downloadHandler(
-      filename = function() "amel_ai_interpretation.md",
+      filename = function() "rnamel_ai_interpretation.md",
       content = function(file) {
         res <- result()
         if (is.null(res)) {
           writeLines("No interpretation generated yet.", file); return()
         }
         writeLines(c(
-          "# AMEL -- AI interpretation",
+          "# RNAmel -- AI interpretation",
           sprintf("_Generated with %s via the Anthropic Claude API._", res$model),
           "", res$text), file)
       }

@@ -1,4 +1,4 @@
-demo_path <- function(f) system.file("extdata", f, package = "AMEL")
+demo_path <- function(f) system.file("extdata", f, package = "RNAmel")
 
 test_that("bundled demo datasets load and validate", {
   sets <- list(

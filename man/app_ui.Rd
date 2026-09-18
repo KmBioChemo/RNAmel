@@ -2,11 +2,11 @@
 % Please edit documentation in R/app.R
 \name{app_ui}
 \alias{app_ui}
-\title{AMEL main UI}
+\title{RNAmel main UI}
 \usage{
 app_ui()
 }
 \description{
-AMEL main UI
+RNAmel main UI
 }
 \keyword{internal}

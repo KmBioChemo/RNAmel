@@ -35,7 +35,7 @@ test_that("old projects without new slots still load and render", {
 })
 
 test_that("save_project and load_project roundtrip", {
-  skip_if_not_installed("AMEL")
+  skip_if_not_installed("RNAmel")
   p <- empty_project("roundtrip")
   p$notes <- c("first note", "second note")
   p$organism <- "mouse"
@@ -51,10 +51,10 @@ test_that("save_project and load_project roundtrip", {
   expect_equal(q$notes, c("first note", "second note"))
 })
 
-test_that("load_project rejects non-AMEL files", {
+test_that("load_project rejects non-RNAmel files", {
   tf <- tempfile()
   saveRDS(list(some = "random object"), tf)
-  expect_error(load_project(tf), "valid AMEL")
+  expect_error(load_project(tf), "valid RNAmel")
 })
 
 test_that("contrast_store_upsert adds, updates in place, and keeps order", {

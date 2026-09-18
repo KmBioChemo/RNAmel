@@ -1,4 +1,4 @@
-# AMEL — architecture & roadmap
+# RNAmel — architecture & roadmap
 
 ## Phase 1 ✅ — Foundations
 
@@ -26,7 +26,7 @@
 2. **Strict input validation.** `validate_counts()`, `validate_metadata()`, `validate_de_results()` fail fast with explicit error messages. No silent simulation: the original app generated fake expression values when no counts matrix was provided — that's been removed, and the heatmap now requires real counts with a clear warning UI when missing.
 3. **Two figure modes.** Every plot function takes a `mode = c("exploration", "publication")` argument. Publication mode uses 8pt Helvetica, strict axes, no grids, fixed margins — ready for Nature/Cell figures without further tweaking.
 4. **Project sessions.** `empty_project()` / `save_project()` / `load_project()` bundle the entire analysis state (counts, metadata, DE, parameters, notes) into a single `.rnaflow.rds` file. Foundation for the project manager UI in phase 2.
-5. **DESeq2 built in.** The original app could only consume pre-computed DE results. AMEL now runs DESeq2 directly from counts + metadata, with auto-contrast detection and apeglm LFC shrinkage.
+5. **DESeq2 built in.** The original app could only consume pre-computed DE results. RNAmel now runs DESeq2 directly from counts + metadata, with auto-contrast detection and apeglm LFC shrinkage.
 
 ---
 

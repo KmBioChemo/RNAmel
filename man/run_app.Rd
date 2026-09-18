@@ -2,7 +2,7 @@
 % Please edit documentation in R/app.R
 \name{run_app}
 \alias{run_app}
-\title{Launch the AMEL Shiny application}
+\title{Launch the RNAmel Shiny application}
 \usage{
 run_app(port = NULL, launch_browser = TRUE)
 }
@@ -15,11 +15,11 @@ run_app(port = NULL, launch_browser = TRUE)
 invisibly returns the Shiny app object
 }
 \description{
-Runs the full AMEL Shiny app, which assembles all modules
+Runs the full RNAmel Shiny app, which assembles all modules
 (data, DE, volcano, heatmap, PCA, ...) into a single interface.
 }
 \examples{
 \dontrun{
-  AMEL::run_app()
+  RNAmel::run_app()
 }
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/app.R
 \name{app_server}
 \alias{app_server}
-\title{AMEL main server}
+\title{RNAmel main server}
 \usage{
 app_server(input, output, session)
 }
@@ -10,6 +10,6 @@ app_server(input, output, session)
 \item{input, output, session}{standard Shiny server args}
 }
 \description{
-AMEL main server
+RNAmel main server
 }
 \keyword{internal}

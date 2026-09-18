@@ -28,10 +28,10 @@ fake_ora <- function() {
 }
 
 test_that("palette helpers return valid colors and scales", {
-  cols <- amel_colors(6)
+  cols <- rnamel_colors(6)
   expect_length(cols, 6)
   expect_true(all(grepl("^#[0-9A-Fa-f]{6}$", cols)))
-  expect_length(amel_colors(30), 30)              # interpolates beyond base
+  expect_length(rnamel_colors(30), 30)              # interpolates beyond base
   expect_true(all(grepl("^#", omics_ramp("batlow", 16))))
   expect_s3_class(scale_fill_omics_div("vik", limits = c(-2, 2)), "ScaleContinuous")
 })

@@ -1,4 +1,4 @@
-# One-shot dependency installer for AMEL (cross-platform: Windows / macOS / Linux)
+# One-shot dependency installer for RNAmel (cross-platform: Windows / macOS / Linux)
 # --------------------------------------------------------------------------------
 # Reads DESCRIPTION and installs every Depends / Imports / Suggests package
 # (CRAN *and* Bioconductor) via BiocManager, which resolves both repositories.
@@ -12,8 +12,8 @@
 # https://cran.r-project.org/bin/windows/Rtools/ before running this.
 
 if (!file.exists("DESCRIPTION")) {
-  stop("Run this from the AMEL package root (the folder with DESCRIPTION). ",
-       "In R:  setwd('path/to/AMEL'); source('dev/install_deps.R')",
+  stop("Run this from the RNAmel package root (the folder with DESCRIPTION). ",
+       "In R:  setwd('path/to/RNAmel'); source('dev/install_deps.R')",
        call. = FALSE)
 }
 
@@ -37,7 +37,7 @@ pkgs   <- unique(pkgs[nzchar(pkgs) & pkgs != "R"])  # drop the "R (>= ...)" entr
 installed <- vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)
 missing   <- pkgs[!installed]
 
-message(sprintf("AMEL has %d dependencies; %d already installed, %d missing.",
+message(sprintf("RNAmel has %d dependencies; %d already installed, %d missing.",
                 length(pkgs), sum(installed), length(missing)))
 
 if (length(missing) > 0) {
@@ -55,4 +55,4 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
 message("\nDone. Next:\n",
         "  devtools::load_all()   # load the package\n",
         "  devtools::test()       # run the test suite\n",
-        "  AMEL::run_app()     # launch the app")
+        "  RNAmel::run_app()     # launch the app")

@@ -1,5 +1,5 @@
 # Small modular dataset: 2 co-expressed blocks driven by latent factors,
-# plus noise genes. genes x samples (AMEL's normalized-matrix convention).
+# plus noise genes. genes x samples (RNAmel's normalized-matrix convention).
 sim_norm <- function(n_samp = 30, seed = 11) {
   set.seed(seed)
   f1 <- rnorm(n_samp); f2 <- rnorm(n_samp)

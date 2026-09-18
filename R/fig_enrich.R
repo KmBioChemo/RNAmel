@@ -140,7 +140,7 @@ fig_enrich_bar <- function(df, n = 20,
 #' GSEA running-enrichment curve
 #'
 #' Wraps [fgsea::plotEnrichment()] for a single pathway, restyled to match
-#' AMEL's theme.
+#' RNAmel's theme.
 #'
 #' @param res DE results data.frame
 #' @param pathway_genes character vector of genes in the pathway

@@ -25,7 +25,7 @@ test_that("generate_methods_text summarizes DE, enrichment and WGCNA", {
   expect_match(txt, "Wald statistic", fixed = TRUE)
   expect_match(txt, "WGCNA", fixed = TRUE)
   expect_match(txt, "power of 12", fixed = TRUE)
-  expect_match(txt, "AMEL", fixed = TRUE)
+  expect_match(txt, "RNAmel", fixed = TRUE)
 })
 
 test_that("generate_methods_text handles an ORA run and an empty project", {

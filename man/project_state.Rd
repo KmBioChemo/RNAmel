@@ -4,7 +4,7 @@
 \alias{project_state}
 \title{Project state management}
 \description{
-Save and restore complete AMEL analysis sessions. A project bundles
+Save and restore complete RNAmel analysis sessions. A project bundles
 the input data, all parameters, and results into a single .rds file
 that can be reopened later or shared with collaborators.
 }

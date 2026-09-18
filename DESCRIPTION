@@ -1,6 +1,6 @@
-Package: AMEL
-Title: Auditable Modular Expression Laboratory (AMEL): An Integrated R/Shiny Platform for Reproducible Bulk RNA-Seq Analysis and Interpretation
-Version: 0.17.0
+Package: RNAmel
+Title: An RNA Modular Expression Laboratory for Reproducible Bulk RNA-Seq Analysis and Interpretation
+Version: 0.18.0
 Authors@R: c(
     person("Tamara", "Pfanner", role = "aut",
            comment = "Equal contribution"),
@@ -10,7 +10,7 @@ Authors@R: c(
     person("Karim", "Matmat", role = c("aut", "cre"),
            email = "karim.matmat@unibas.ch",
            comment = c(ORCID = "0009-0009-8226-4846")))
-Description: AMEL is a modular Shiny application packaged as an R package
+Description: RNAmel is a modular Shiny application packaged as an R package
     for downstream bulk RNA-seq analysis. It takes raw count matrices and
     sample metadata as input and provides differential expression analysis
     (DESeq2), visualization (volcano, heatmap, PCA / UMAP / 3D PCA, a linked
@@ -87,6 +87,6 @@ Suggests:
     pkgdown
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-URL: https://github.com/KmBioChemo/AMEL, https://KmBioChemo.github.io/AMEL/
-BugReports: https://github.com/KmBioChemo/AMEL/issues
+URL: https://github.com/KmBioChemo/RNAmel, https://KmBioChemo.github.io/RNAmel/
+BugReports: https://github.com/KmBioChemo/RNAmel/issues
 Config/roxygen2/version: 8.0.0

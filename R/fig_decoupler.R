@@ -1,7 +1,7 @@
 #' Activity figures
 #'
 #' Diverging bar chart of the top transcription-factor / pathway activity
-#' scores from [run_activity()]. Pure ggplot, using the shared AMEL theme.
+#' scores from [run_activity()]. Pure ggplot, using the shared RNAmel theme.
 #'
 #' @name fig_decoupler
 #' @keywords internal

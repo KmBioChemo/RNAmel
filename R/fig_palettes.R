@@ -1,6 +1,6 @@
 #' Scientific color palettes
 #'
-#' A cohesive, publication-oriented palette system used across AMEL's
+#' A cohesive, publication-oriented palette system used across RNAmel's
 #' figures: a publication-oriented qualitative palette for categories, and
 #' perceptually-uniform continuous scales (via \pkg{scico}, with a viridis
 #' fallback) for scores such as NES, correlation, or -log10(FDR).
@@ -16,13 +16,13 @@ RNAFLOW_QUAL <- c(
   "#E7A20D", "#5F559B", "#A6761D", "#1B9E77", "#666666"
 )
 
-#' Qualitative AMEL colors
+#' Qualitative RNAmel colors
 #'
 #' @param n number of colors needed
 #' @return a character vector of `n` hex colors (interpolated if `n` exceeds
 #'   the base palette)
 #' @keywords internal
-amel_colors <- function(n) {
+rnamel_colors <- function(n) {
   base <- RNAFLOW_QUAL
   if (n <= length(base)) return(base[seq_len(n)])
   grDevices::colorRampPalette(base)(n)
@@ -31,13 +31,13 @@ amel_colors <- function(n) {
 #' Discrete color / fill scales (qualitative)
 #' @param ... passed to the underlying ggplot2 scale
 #' @keywords internal
-scale_color_amel <- function(...) {
-  ggplot2::discrete_scale("colour", palette = function(n) amel_colors(n), ...)
+scale_color_rnamel <- function(...) {
+  ggplot2::discrete_scale("colour", palette = function(n) rnamel_colors(n), ...)
 }
-#' @rdname scale_color_amel
+#' @rdname scale_color_rnamel
 #' @keywords internal
-scale_fill_amel <- function(...) {
-  ggplot2::discrete_scale("fill", palette = function(n) amel_colors(n), ...)
+scale_fill_rnamel <- function(...) {
+  ggplot2::discrete_scale("fill", palette = function(n) rnamel_colors(n), ...)
 }
 
 #' Continuous "omics" color ramp

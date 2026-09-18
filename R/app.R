@@ -1,6 +1,6 @@
-#' Launch the AMEL Shiny application
+#' Launch the RNAmel Shiny application
 #'
-#' Runs the full AMEL Shiny app, which assembles all modules
+#' Runs the full RNAmel Shiny app, which assembles all modules
 #' (data, DE, volcano, heatmap, PCA, ...) into a single interface.
 #'
 #' @param port port to launch on (default: random free port)
@@ -9,7 +9,7 @@
 #' @export
 #' @examples
 #' \dontrun{
-#'   AMEL::run_app()
+#'   RNAmel::run_app()
 #' }
 run_app <- function(port = NULL, launch_browser = TRUE) {
   shiny::shinyApp(
@@ -29,16 +29,16 @@ launch_app <- function(port = NULL, launch_browser = TRUE) {
   run_app(port = port, launch_browser = launch_browser)
 }
 
-#' AMEL main UI
+#' RNAmel main UI
 #'
 #' @keywords internal
 app_ui <- function() {
   bslib::page_navbar(
     title = shiny::tagList(
-      shiny::span(class = "rnaflow-brand", "AMEL"),
+      shiny::span(class = "rnaflow-brand", "RNAmel"),
       shiny::tags$small(
         style = "font-weight:normal;color:#7F8C8D;margin-left:6px;",
-        paste0("v", utils::packageVersion("AMEL"))
+        paste0("v", utils::packageVersion("RNAmel"))
       )
     ),
     theme = bslib::bs_theme(version = 5, bootswatch = "flatly",
@@ -47,7 +47,7 @@ app_ui <- function() {
       shiny::tags$head(
         shiny::tags$link(rel = "stylesheet", type = "text/css",
                          href = paste0("rnaflow/rnaflow.css?v=",
-                                       utils::packageVersion("AMEL")))
+                                       utils::packageVersion("RNAmel")))
       )
     ),
     fillable = TRUE,
@@ -100,7 +100,7 @@ app_ui <- function() {
               shiny::div(
                 class = "rnaflow-banner rf-success",
                 shiny::icon("circle-check", class = "rf-ic"),
-                shiny::span("AMEL validates every file on import -- if ",
+                shiny::span("RNAmel validates every file on import -- if ",
                             "something is malformed, you'll see exactly why.")
               )
             )
@@ -144,7 +144,7 @@ app_ui <- function() {
     ),
     bslib::nav_item(
       shiny::tags$a(
-        href = "https://github.com/KmBioChemo/AMEL",
+        href = "https://github.com/KmBioChemo/RNAmel",
         target = "_blank",
         shiny::icon("github"), " GitHub"
       )
@@ -152,7 +152,7 @@ app_ui <- function() {
   )
 }
 
-#' AMEL main server
+#' RNAmel main server
 #'
 #' @param input,output,session standard Shiny server args
 #' @keywords internal

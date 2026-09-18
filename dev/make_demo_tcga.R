@@ -4,7 +4,7 @@
 # distinct cancer types x 15 tumors = 120 samples. Raw gene counts with gene
 # symbols. This is the "complex, many-group" demo: cancer types separate
 # dramatically in PCA / UMAP / WGCNA, and the 8-level factor gives a rich
-# multi-contrast comparison, so it exercises the full AMEL pipeline.
+# multi-contrast comparison, so it exercises the full RNAmel pipeline.
 #
 # Run from the package root:  Rscript dev/make_demo_tcga.R
 # (Downloads the TCGA matrix via ExperimentHub on first use; cached afterwards.)

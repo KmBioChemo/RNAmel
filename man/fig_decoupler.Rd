@@ -5,6 +5,6 @@
 \title{Activity figures}
 \description{
 Diverging bar chart of the top transcription-factor / pathway activity
-scores from \code{\link[=run_activity]{run_activity()}}. Pure ggplot, using the shared AMEL theme.
+scores from \code{\link[=run_activity]{run_activity()}}. Pure ggplot, using the shared RNAmel theme.
 }
 \keyword{internal}
