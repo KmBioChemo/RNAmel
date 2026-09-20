@@ -1,3 +1,19 @@
+# RNAmel 0.18.1 (2026-09-20)
+
+## Bug fixes and reproducibility
+
+- Clean `R CMD check` (0 errors / 0 warnings / 0 notes): non-ASCII characters
+  escaped in `mod_data.R`; the `read_counts()` documentation is re-attached to
+  its function; `.zenodo.json` is listed in `.Rbuildignore`.
+- The reproducible R-script export now reproduces the interactive analysis
+  faithfully: it emits the shrinkage estimator actually used (`shrink_type`)
+  rather than the default, and exports all-pairwise contrasts as a single
+  shared `run_deseq2_all_pairs()` fit instead of independent per-contrast fits.
+- Added `renv.lock` (R 4.5.2, Bioconductor 3.22, 324 packages) for byte-for-byte
+  package restoration on top of the pinned platform.
+- Author order aligned with the manuscript in DESCRIPTION, CITATION.cff,
+  inst/CITATION, codemeta.json and .zenodo.json.
+
 # RNAmel 0.18.0 (2026-09-18)
 
 ## Project rename

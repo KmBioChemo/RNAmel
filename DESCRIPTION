@@ -1,6 +1,6 @@
 Package: RNAmel
 Title: RNA Modular Expression Laboratory (RNAmel): An Integrated R/Shiny Platform for Reproducible Bulk RNA-Seq Analysis and Interpretation
-Version: 0.18.0
+Version: 0.18.1
 Authors@R: c(
     person("Karim", "Matmat", role = c("aut", "cre"),
            email = "karim.matmat@unibas.ch",
