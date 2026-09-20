@@ -24,7 +24,7 @@ run_gsva(
 - gene_sets:
 
   named list of gene-identifier vectors (e.g. from
-  [`get_gene_sets()`](https://KmBioChemo.github.io/RNAflow/reference/get_gene_sets.md))
+  [`get_gene_sets()`](https://KmBioChemo.github.io/RNAmel/reference/get_gene_sets.md))
 
 - method:
 

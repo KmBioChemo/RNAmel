@@ -1,7 +1,7 @@
 # Activity inference module
 
 Shiny module wrapping the pure
-[analysis_decoupler](https://KmBioChemo.github.io/RNAflow/reference/analysis_decoupler.md)
+[analysis_decoupler](https://KmBioChemo.github.io/RNAmel/reference/analysis_decoupler.md)
 layer. Infers transcription-factor (CollecTRI) or pathway (PROGENy)
 activity for the active contrast with decoupleR and renders a diverging
 bar chart plus a results table.

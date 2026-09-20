@@ -17,7 +17,7 @@ fig_module_sizes(
 - wg:
 
   the list returned by
-  [`run_wgcna()`](https://KmBioChemo.github.io/RNAflow/reference/run_wgcna.md)
+  [`run_wgcna()`](https://KmBioChemo.github.io/RNAmel/reference/run_wgcna.md)
 
 - include_grey:
 

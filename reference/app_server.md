@@ -1,6 +1,6 @@
-# RNAflow main server
+# RNAmel main server
 
-RNAflow main server
+RNAmel main server
 
 ## Usage
 

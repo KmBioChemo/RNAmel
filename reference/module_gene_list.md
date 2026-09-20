@@ -13,7 +13,7 @@ module_gene_list(wg, exclude_grey = TRUE)
 - wg:
 
   the list returned by
-  [`run_wgcna()`](https://KmBioChemo.github.io/RNAflow/reference/run_wgcna.md)
+  [`run_wgcna()`](https://KmBioChemo.github.io/RNAmel/reference/run_wgcna.md)
 
 - exclude_grey:
 
@@ -23,5 +23,5 @@ module_gene_list(wg, exclude_grey = TRUE)
 
 a named list of character vectors (module color -\> genes), ready to
 feed
-[`run_ora()`](https://KmBioChemo.github.io/RNAflow/reference/run_ora.md)
+[`run_ora()`](https://KmBioChemo.github.io/RNAmel/reference/run_ora.md)
 for module-to-pathway enrichment

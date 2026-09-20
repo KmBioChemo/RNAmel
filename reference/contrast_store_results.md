@@ -17,7 +17,7 @@ contrast_store_results(store)
 ## Value
 
 a named list of DE results data.frames (the shape expected by the
-[analysis_compare](https://KmBioChemo.github.io/RNAflow/reference/analysis_compare.md)
+[analysis_compare](https://KmBioChemo.github.io/RNAmel/reference/analysis_compare.md)
 and
-[fig_compare](https://KmBioChemo.github.io/RNAflow/reference/fig_compare.md)
+[fig_compare](https://KmBioChemo.github.io/RNAmel/reference/fig_compare.md)
 functions)

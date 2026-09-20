@@ -27,12 +27,12 @@ fig_gsea_ridge(
 - gene_sets:
 
   named list of gene sets (from
-  [`get_gene_sets()`](https://KmBioChemo.github.io/RNAflow/reference/get_gene_sets.md))
+  [`get_gene_sets()`](https://KmBioChemo.github.io/RNAmel/reference/get_gene_sets.md))
 
 - gsea:
 
   a data.frame from
-  [`run_gsea()`](https://KmBioChemo.github.io/RNAflow/reference/run_gsea.md)
+  [`run_gsea()`](https://KmBioChemo.github.io/RNAmel/reference/run_gsea.md)
   (for ordering / NES coloring)
 
 - n:
@@ -42,7 +42,7 @@ fig_gsea_ridge(
 - rank_by:
 
   ranking metric passed to
-  [`rank_genes()`](https://KmBioChemo.github.io/RNAflow/reference/rank_genes.md)
+  [`rank_genes()`](https://KmBioChemo.github.io/RNAmel/reference/rank_genes.md)
 
 - mode:
 

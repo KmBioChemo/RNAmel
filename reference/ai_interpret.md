@@ -4,7 +4,7 @@ Turns a differential-expression contrast (plus optional functional
 enrichment) into a compact prompt and asks Anthropic's Claude API to
 write a biological narrative. The prompt-building functions are pure and
 testable without any network access;
-[`call_claude()`](https://KmBioChemo.github.io/RNAflow/reference/call_claude.md)
+[`call_claude()`](https://KmBioChemo.github.io/RNAmel/reference/call_claude.md)
 is the only function that touches the API (guarded by httr2).
 
 ## Details

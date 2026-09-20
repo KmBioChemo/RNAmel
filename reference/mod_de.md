@@ -21,7 +21,7 @@ mod_de_server(id, data_mod, contrast_store = NULL)
 - data_mod:
 
   the value returned by
-  [`mod_data_server()`](https://KmBioChemo.github.io/RNAflow/reference/mod_data.md)
+  [`mod_data_server()`](https://KmBioChemo.github.io/RNAmel/reference/mod_data.md)
 
 - contrast_store:
 

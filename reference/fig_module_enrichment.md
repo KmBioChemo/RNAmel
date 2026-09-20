@@ -17,7 +17,7 @@ fig_module_enrichment(
 - combined:
 
   a data.frame from
-  [`enrich_modules()`](https://KmBioChemo.github.io/RNAflow/reference/enrich_modules.md)
+  [`enrich_modules()`](https://KmBioChemo.github.io/RNAmel/reference/enrich_modules.md)
 
 - max_terms:
 

@@ -1,8 +1,7 @@
-# Contributing to RNAflow
+# Contributing to RNAmel
 
-Thanks for your interest in improving RNAflow! Contributions of all
-kinds are welcome — bug reports, feature ideas, documentation fixes, and
-code.
+Thanks for your interest in improving RNAmel! Contributions of all kinds
+are welcome — bug reports, feature ideas, documentation fixes, and code.
 
 ## Reporting bugs and requesting features
 
@@ -16,7 +15,7 @@ Please open an issue using the templates:
 
 ## Development setup
 
-RNAflow is a standard R package. From a clone:
+RNAmel is a standard R package. From a clone:
 
 ``` r
 
@@ -24,7 +23,7 @@ RNAflow is a standard R package. From a clone:
 source("dev/install_deps.R")   # one-time: CRAN + Bioconductor dependencies
 devtools::load_all()           # load the package
 devtools::test()               # run the test suite
-RNAflow::run_app()             # launch the Shiny app
+RNAmel::run_app()             # launch the Shiny app
 ```
 
 A Bioconductor stack is required (DESeq2, clusterProfiler, WGCNA, GSVA,
@@ -34,7 +33,7 @@ locally.
 
 ## Architecture and code style
 
-RNAflow follows a strict **pure / impure separation**:
+RNAmel follows a strict **pure / impure separation**:
 
 - **Pure layer** — all analysis and figure logic lives in non-Shiny
   functions (`analysis_*`, `fig_*`, `utils_*`) and is unit-tested
@@ -60,4 +59,4 @@ When adding functionality:
 ## Code of conduct
 
 By participating you agree to abide by the [Code of
-Conduct](https://KmBioChemo.github.io/RNAflow/CODE_OF_CONDUCT.md).
+Conduct](https://KmBioChemo.github.io/RNAmel/CODE_OF_CONDUCT.md).

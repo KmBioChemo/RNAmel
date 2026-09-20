@@ -1,9 +1,9 @@
 # Volcano plot module
 
 Shiny module wrapping
-[`fig_volcano()`](https://KmBioChemo.github.io/RNAflow/reference/fig_volcano.md)
+[`fig_volcano()`](https://KmBioChemo.github.io/RNAmel/reference/fig_volcano.md)
 and
-[`fig_volcano_interactive()`](https://KmBioChemo.github.io/RNAflow/reference/fig_volcano_interactive.md),
+[`fig_volcano_interactive()`](https://KmBioChemo.github.io/RNAmel/reference/fig_volcano_interactive.md),
 with all the controls from the original app.
 
 ## Usage

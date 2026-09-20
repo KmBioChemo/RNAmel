@@ -2,7 +2,7 @@
 
 Wraps
 [`fgsea::plotEnrichment()`](https://rdrr.io/pkg/fgsea/man/plotEnrichment.html)
-for a single pathway, restyled to match RNAflow's theme.
+for a single pathway, restyled to match RNAmel's theme.
 
 ## Usage
 
@@ -30,7 +30,7 @@ fig_gsea_curve(
 - rank_by:
 
   ranking metric passed to
-  [`rank_genes()`](https://KmBioChemo.github.io/RNAflow/reference/rank_genes.md)
+  [`rank_genes()`](https://KmBioChemo.github.io/RNAmel/reference/rank_genes.md)
 
 - title:
 

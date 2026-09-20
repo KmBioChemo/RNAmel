@@ -4,7 +4,7 @@ Shiny module rendering a crosstalk-linked volcano and DE table for the
 active contrast: brushing points in the plotly volcano highlights the
 matching rows in the table, and the current selection is echoed as a
 gene list you can copy or download. Wraps the pure
-[fig_linked](https://KmBioChemo.github.io/RNAflow/reference/fig_linked.md)
+[fig_linked](https://KmBioChemo.github.io/RNAmel/reference/fig_linked.md)
 layer.
 
 ## Usage

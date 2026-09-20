@@ -15,7 +15,7 @@ contrast_direction_table(contrasts, padj_thr = 0.05, lfc_thr = 1)
 - contrasts:
 
   a named list of DE data.frames (e.g. from
-  [`contrast_store_results()`](https://KmBioChemo.github.io/RNAflow/reference/contrast_store_results.md))
+  [`contrast_store_results()`](https://KmBioChemo.github.io/RNAmel/reference/contrast_store_results.md))
 
 - padj_thr, lfc_thr:
 

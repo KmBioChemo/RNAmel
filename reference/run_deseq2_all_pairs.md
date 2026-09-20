@@ -3,7 +3,7 @@
 Fits the DESeq2 model once (shared dispersion estimates) and extracts
 every pairwise contrast of the design variable's levels – far faster
 than calling
-[`run_deseq2()`](https://KmBioChemo.github.io/RNAflow/reference/run_deseq2.md)
+[`run_deseq2()`](https://KmBioChemo.github.io/RNAmel/reference/run_deseq2.md)
 once per pair. Inference (Wald stat / p-values) always comes from the
 unshrunken test; effect-size shrinkage, when requested, is
 contrast-based (`normal`/`ashr`), since apeglm requires a model

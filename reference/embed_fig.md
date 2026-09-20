@@ -1,6 +1,6 @@
-# Embed any RNAflow figure as an ![](NA) data URI
+# Embed any RNAmel figure as an ![](NA) data URI
 
-Embed any RNAflow figure as an ![](NA) data URI
+Embed any RNAmel figure as an ![](NA) data URI
 
 ## Usage
 

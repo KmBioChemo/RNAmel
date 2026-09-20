@@ -24,7 +24,7 @@ build_interpret_prompt(
 - enrich:
 
   optional enrichment result list (see
-  [`summarize_enrich_for_ai()`](https://KmBioChemo.github.io/RNAflow/reference/summarize_enrich_for_ai.md))
+  [`summarize_enrich_for_ai()`](https://KmBioChemo.github.io/RNAmel/reference/summarize_enrich_for_ai.md))
 
 - organism:
 

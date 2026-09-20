@@ -2,9 +2,9 @@
 
 Exports the session as a reproducible R script and a self-contained HTML
 report, and shows the package versions used. Wraps
-[`generate_r_script()`](https://KmBioChemo.github.io/RNAflow/reference/generate_r_script.md)
+[`generate_r_script()`](https://KmBioChemo.github.io/RNAmel/reference/generate_r_script.md)
 and
-[`build_report_html()`](https://KmBioChemo.github.io/RNAflow/reference/build_report_html.md).
+[`build_report_html()`](https://KmBioChemo.github.io/RNAmel/reference/build_report_html.md).
 
 ## Usage
 
@@ -23,7 +23,7 @@ mod_report_server(id, data_mod, contrast_store, settings_store = NULL)
 - data_mod:
 
   the value returned by
-  [`mod_data_server()`](https://KmBioChemo.github.io/RNAflow/reference/mod_data.md)
+  [`mod_data_server()`](https://KmBioChemo.github.io/RNAmel/reference/mod_data.md)
 
 - contrast_store:
 

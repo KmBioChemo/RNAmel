@@ -1,11 +1,11 @@
 # WGCNA co-expression network module
 
 Shiny module wrapping the
-[analysis_wgcna](https://KmBioChemo.github.io/RNAflow/reference/analysis_wgcna.md)
+[analysis_wgcna](https://KmBioChemo.github.io/RNAmel/reference/analysis_wgcna.md)
 layer: soft-threshold picking, module detection, module-trait
 correlation, hub genes, eigengene profiles, and per-module pathway
 enrichment (reusing
-[`run_ora()`](https://KmBioChemo.github.io/RNAflow/reference/run_ora.md)
+[`run_ora()`](https://KmBioChemo.github.io/RNAmel/reference/run_ora.md)
 from phase 3).
 
 ## Usage

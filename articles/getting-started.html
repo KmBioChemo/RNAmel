@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Getting started with RNAflow • RNAflow</title>
+<title>Getting started with RNAmel • RNAmel</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with RNAflow">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with RNAmel">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -18,9 +18,9 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="../index.html">RNAflow</a>
+    <a class="navbar-brand me-2" href="../index.html">RNAmel</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.16.7</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.18.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/getting-started.html">Getting started with RNAflow</a></li>
+<li><a class="dropdown-item" href="../articles/getting-started.html">Getting started with RNAmel</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -42,7 +42,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/KmBioChemo/RNAflow/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/KmBioChemo/RNAmel/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -56,22 +56,22 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
-      <h1>Getting started with RNAflow</h1>
+      <h1>Getting started with RNAmel</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/KmBioChemo/RNAflow/blob/v0.16.7/vignettes/getting-started.Rmd" class="external-link"><code>vignettes/getting-started.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/KmBioChemo/RNAmel/blob/v0.18.1/vignettes/getting-started.Rmd" class="external-link"><code>vignettes/getting-started.Rmd</code></a></small>
       <div class="d-none name"><code>getting-started.Rmd</code></div>
     </div>
 
     
     
-<p>RNAflow is a downstream bulk RNA-seq analysis platform, usable either
+<p>RNAmel is a downstream bulk RNA-seq analysis platform, usable either
 as an interactive Shiny app (<code><a href="../reference/run_app.html">run_app()</a></code>) or as a set of
 pure, scriptable functions. This vignette is a <strong>reproducible
 reference analysis</strong>: the core steps below run on a bundled,
 published dataset so you can reproduce a real result end to end.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAflow" class="external-link">RNAflow</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAmel" class="external-link">RNAmel</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="the-data">The data<a class="anchor" aria-label="anchor" href="#the-data"></a>
 </h2>
@@ -81,9 +81,9 @@ smooth-muscle cells treated with dexamethasone vs. control across four
 cell lines.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_counts.html">read_counts</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"demo_airway_counts.csv"</span>,</span>
-<span>                                  package <span class="op">=</span> <span class="st">"RNAflow"</span><span class="op">)</span><span class="op">)</span></span>
+<span>                                  package <span class="op">=</span> <span class="st">"RNAmel"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">meta</span>   <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_metadata.html">read_metadata</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"demo_airway_metadata.csv"</span>,</span>
-<span>                                    package <span class="op">=</span> <span class="st">"RNAflow"</span><span class="op">)</span>,</span>
+<span>                                    package <span class="op">=</span> <span class="st">"RNAmel"</span><span class="op">)</span>,</span>
 <span>                        counts_samples <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 17190     8</span></span>
@@ -116,19 +116,19 @@ dexamethasone (<code>Dex</code>) against <code>Control</code>.</p>
 <span><span class="co">#&gt; converting counts to integer mode</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">res</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">res</span><span class="op">$</span><span class="va">padj</span><span class="op">)</span>, <span class="op">]</span><span class="op">)</span></span>
 <span><span class="co">#&gt;         gene   baseMean log2FoldChange     lfcSE     stat        pvalue</span></span>
-<span><span class="co">#&gt; 6538  CACNB2   495.3581       3.275664 0.1326449 24.80377 8.163664e-136</span></span>
+<span><span class="co">#&gt; 6538  CACNB2   495.3581       3.275664 0.1326449 24.80377 8.163663e-136</span></span>
 <span><span class="co">#&gt; 3979 SPARCL1   997.6038       4.550562 0.1865863 24.70052 1.055901e-134</span></span>
-<span><span class="co">#&gt; 1056   DUSP1  3410.8040       2.933081 0.1219507 24.24829 6.893204e-130</span></span>
+<span><span class="co">#&gt; 1056   DUSP1  3410.8040       2.933081 0.1219507 24.24829 6.893203e-130</span></span>
 <span><span class="co">#&gt; 234   SAMHD1 12705.8482       3.753364 0.1576715 24.08727 3.398689e-128</span></span>
-<span><span class="co">#&gt; 1618    MAOA  2343.3913       3.336101 0.1430166 23.58574 5.398709e-123</span></span>
+<span><span class="co">#&gt; 1618    MAOA  2343.3913       3.336101 0.1430166 23.58574 5.398708e-123</span></span>
 <span><span class="co">#&gt; 253     GPX3 12292.3589       3.711423 0.1692351 22.30297 3.457747e-110</span></span>
 <span><span class="co">#&gt;               padj</span></span>
-<span><span class="co">#&gt; 6538 1.240061e-131</span></span>
-<span><span class="co">#&gt; 3979 8.019567e-131</span></span>
-<span><span class="co">#&gt; 1056 3.490259e-126</span></span>
+<span><span class="co">#&gt; 6538 1.240060e-131</span></span>
+<span><span class="co">#&gt; 3979 8.019566e-131</span></span>
+<span><span class="co">#&gt; 1056 3.490258e-126</span></span>
 <span><span class="co">#&gt; 234  1.290652e-124</span></span>
 <span><span class="co">#&gt; 1618 1.640128e-119</span></span>
-<span><span class="co">#&gt; 253  8.753863e-107</span></span>
+<span><span class="co">#&gt; 253  8.753862e-107</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">res</span><span class="op">$</span><span class="va">padj</span> <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">res</span><span class="op">$</span><span class="va">log2FoldChange</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>  <span class="co"># sig genes</span></span>
 <span><span class="co">#&gt; [1] 770</span></span></code></pre></div>
 </div>
@@ -204,7 +204,7 @@ self-contained HTML report (no pandoc/Quarto required):</p>
 <p>Everything above is also available point-and-click in the app:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>See the <a href="https://KmBioChemo.github.io/RNAflow/">package
+<p>See the <a href="https://KmBioChemo.github.io/RNAmel/">package
 website</a> for the full function reference and the README for the
 feature overview.</p>
 </div>
@@ -215,7 +215,7 @@ feature overview.</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tamara Pfanner, Rafael P. Silveira, Matthias P. Wymann, Karim Matmat.</p>
+  <p>Developed by Karim Matmat, Tamara Pfanner, Rafael P. Silveira, Matthias P. Wymann.</p>
 </div>
 
 <div class="pkgdown-footer-right">

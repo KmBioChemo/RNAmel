@@ -12,7 +12,7 @@ one for pathways).
 
 The scoring is a pure function of the DE table and the network; only the
 network *fetch*
-([`get_tf_network()`](https://KmBioChemo.github.io/RNAflow/reference/get_tf_network.md)
+([`get_tf_network()`](https://KmBioChemo.github.io/RNAmel/reference/get_tf_network.md)
 /
-[`get_pathway_network()`](https://KmBioChemo.github.io/RNAflow/reference/get_pathway_network.md))
+[`get_pathway_network()`](https://KmBioChemo.github.io/RNAmel/reference/get_pathway_network.md))
 reaches OmniPath over the internet.

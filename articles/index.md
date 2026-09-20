@@ -3,4 +3,4 @@
 ### All vignettes
 
 - [Getting started with
-  RNAflow](https://KmBioChemo.github.io/RNAflow/articles/getting-started.md):
+  RNAmel](https://KmBioChemo.github.io/RNAmel/articles/getting-started.md):

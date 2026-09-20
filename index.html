@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>RNAflow • RNAflow</title>
+<title>RNAmel • RNAmel</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="RNAflow">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="RNAmel">
 <meta name="description" content="Downstream bulk RNA-seq analysis platform.">
 <meta property="og:description" content="Downstream bulk RNA-seq analysis platform.">
 </head>
@@ -20,9 +20,9 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="index.html">RNAflow</a>
+    <a class="navbar-brand me-2" href="index.html">RNAmel</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.16.7</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.18.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/getting-started.html">Getting started with RNAflow</a></li>
+<li><a class="dropdown-item" href="articles/getting-started.html">Getting started with RNAmel</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
@@ -44,7 +44,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/KmBioChemo/RNAflow/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/KmBioChemo/RNAmel/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -53,21 +53,21 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="rnaflow">RNAflow<a class="anchor" aria-label="anchor" href="#rnaflow"></a>
+<div class="page-header"><h1 id="rnamel">RNAmel<a class="anchor" aria-label="anchor" href="#rnamel"></a>
 </h1></div>
 <!-- badges: start -->
 
 <blockquote>
 <p>Downstream bulk RNA-seq analysis platform — interactive Shiny app, packaged as an R package.</p>
 </blockquote>
-<p><strong>RNAflow</strong> is a modular Shiny application built as a proper R package for downstream bulk RNA-seq analysis. It takes raw count matrices and sample metadata as input and provides differential expression (DESeq2), QC diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked volcano-table explorer, multi-contrast comparisons, functional enrichment (GSEA / ORA, with an interactive enrichment network), co-expression network analysis (WGCNA), transcription-factor and pathway activity inference (decoupleR), per-sample gene-set signatures (GSVA / ssGSEA), optional AI-assisted interpretation, publication-ready figures, and reproducible R-script / HTML report / Methods-paragraph export.</p>
+<p><strong>RNAmel</strong> is a modular Shiny application built as a proper R package for downstream bulk RNA-seq analysis. It takes raw count matrices and sample metadata as input and provides differential expression (DESeq2), QC diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked volcano-table explorer, multi-contrast comparisons, functional enrichment (GSEA / ORA, with an interactive enrichment network), co-expression network analysis (WGCNA), transcription-factor and pathway activity inference (decoupleR), per-sample gene-set signatures (GSVA / ssGSEA), optional AI-assisted interpretation, publication-ready figures, and reproducible R-script / HTML report / Methods-paragraph export.</p>
 <p>Supported organisms: <strong>human</strong>, <strong>mouse</strong>, <strong>rat</strong>.</p>
 <div class="section level2">
 <h2 id="contents">Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
 </h2>
 <ul>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#why-rnaflow">Why RNAflow?</a></li>
+<li><a href="#why-rnaflow">Why RNAmel?</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#input-formats">Input formats</a></li>
@@ -93,15 +93,15 @@
 <div class="float">
 <img src="reference/figures/gallery-multi-contrast.png" alt="Multi-contrast comparison"><div class="figcaption">Multi-contrast comparison</div>
 </div>
-<p><strong>Consistency &amp; regression checks</strong> — RNAflow reproduces its own results exactly (round-trip through the exported R script), all-pairwise contrasts match a single shared fit, and fold changes concord with limma-voom on the <em>airway</em> demo. These are internal consistency and regression checks, not a general validation of the underlying statistical methods.</p>
+<p><strong>Consistency &amp; regression checks</strong> — RNAmel reproduces its own results exactly (round-trip through the exported R script), all-pairwise contrasts match a single shared fit, and fold changes concord with limma-voom on the <em>airway</em> demo. These are internal consistency and regression checks, not a general validation of the underlying statistical methods.</p>
 <div class="float">
 <img src="reference/figures/gallery-validation.png" alt="Consistency checks"><div class="figcaption">Consistency checks</div>
 </div>
 </div>
 <div class="section level2">
-<h2 id="why-rnaflow">Why RNAflow?<a class="anchor" aria-label="anchor" href="#why-rnaflow"></a>
+<h2 id="why-rnamel">Why RNAmel?<a class="anchor" aria-label="anchor" href="#why-rnamel"></a>
 </h2>
-<p>Downstream RNA-seq analysis is often done either with bespoke scripts — flexible, but written for a single project and harder to reuse and audit — or with interactive applications that prioritise ease of use. RNAflow aims to combine both: an interactive interface backed by a tested, reusable R package, with:</p>
+<p>Downstream RNA-seq analysis is often done either with bespoke scripts — flexible, but written for a single project and harder to reuse and audit — or with interactive applications that prioritise ease of use. RNAmel aims to combine both: an interactive interface backed by a tested, reusable R package, with:</p>
 <ul>
 <li>Clean module separation (UI + server per feature)</li>
 <li>Pure function layer (figures and analyses testable without Shiny)</li>
@@ -122,15 +122,15 @@
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://bioconductor.github.io/BiocManager/" class="external-link">"BiocManager"</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span>,    quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Then install RNAflow (see "Bioconductor dependencies" below for the heavy deps):</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"KmBioChemo/RNAflow"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co"># Then install RNAmel (see "Bioconductor dependencies" below for the heavy deps):</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"KmBioChemo/RNAmel"</span><span class="op">)</span></span></code></pre></div>
 <p>Or, from a local clone:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_local</span><span class="op">(</span><span class="st">"path/to/RNAflow"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_local</span><span class="op">(</span><span class="st">"path/to/RNAmel"</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="bioconductor-dependencies">Bioconductor dependencies<a class="anchor" aria-label="anchor" href="#bioconductor-dependencies"></a>
 </h3>
-<p>RNAflow uses several Bioconductor packages. Install them first:</p>
+<p>RNAmel uses several Bioconductor packages. Install them first:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://bioconductor.github.io/BiocManager/" class="external-link">"BiocManager"</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
@@ -148,7 +148,7 @@
 <div class="section level4">
 <h4 id="id_1-install-r">1. Install R<a class="anchor" aria-label="anchor" href="#id_1-install-r"></a>
 </h4>
-<p>R is the language RNAflow runs on. Download the latest R (4.4 or newer) for your operating system from <strong><a href="https://cran.r-project.org/" class="external-link uri">https://cran.r-project.org/</a></strong> and run the installer with the default options.</p>
+<p>R is the language RNAmel runs on. Download the latest R (4.4 or newer) for your operating system from <strong><a href="https://cran.r-project.org/" class="external-link uri">https://cran.r-project.org/</a></strong> and run the installer with the default options.</p>
 <ul>
 <li>
 <strong>Windows</strong> — download “R for Windows” → “base” → <em>Download R-x.x.x for Windows</em>, run the <code>.exe</code>.</li>
@@ -199,8 +199,8 @@
 <span>  <span class="st">"decoupleR"</span>, <span class="st">"OmnipathR"</span></span>
 <span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># c) RNAflow itself (pulls in the remaining CRAN packages automatically)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"KmBioChemo/RNAflow"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co"># c) RNAmel itself (pulls in the remaining CRAN packages automatically)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"KmBioChemo/RNAmel"</span><span class="op">)</span></span></code></pre></div>
 <blockquote>
 <p>If you are asked <em>“Do you want to install from sources the packages which need compilation?”</em>, answering <strong>No</strong> is fine and faster.</p>
 </blockquote>
@@ -209,11 +209,11 @@
 <h4 id="id_5-launch-the-app">5. Launch the app<a class="anchor" aria-label="anchor" href="#id_5-launch-the-app"></a>
 </h4>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAflow" class="external-link">RNAflow</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAmel" class="external-link">RNAmel</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Your web browser opens with RNAflow running locally. Load the bundled demo data (see <a href="#demo-datasets">Demo datasets</a>) to try it immediately.</p>
+<p>Your web browser opens with RNAmel running locally. Load the bundled demo data (see <a href="#demo-datasets">Demo datasets</a>) to try it immediately.</p>
 <blockquote>
-<p><strong>Note on activity inference (TF / pathway):</strong> RNAflow ships offline copies of the human CollecTRI and PROGENy networks, so transcription-factor and pathway activity work for human even when the OmniPath web service is down — no <code>OmnipathR</code> needed. The <code>decoupleR</code> package is still required to do the scoring, and <code>OmnipathR</code> is only needed to fetch live networks or to analyse <strong>mouse / rat</strong> activity, so keep both in step (b) if you want activity inference.</p>
+<p><strong>Note on activity inference (TF / pathway):</strong> RNAmel ships offline copies of the human CollecTRI and PROGENy networks, so transcription-factor and pathway activity work for human even when the OmniPath web service is down — no <code>OmnipathR</code> needed. The <code>decoupleR</code> package is still required to do the scoring, and <code>OmnipathR</code> is only needed to fetch live networks or to analyse <strong>mouse / rat</strong> activity, so keep both in step (b) if you want activity inference.</p>
 </blockquote>
 </div>
 </div>
@@ -225,13 +225,13 @@
 <h3 id="launch-the-app">Launch the app<a class="anchor" aria-label="anchor" href="#launch-the-app"></a>
 </h3>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAflow" class="external-link">RNAflow</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAmel" class="external-link">RNAmel</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="run-with-docker-reproducible">Run with Docker (reproducible)<a class="anchor" aria-label="anchor" href="#run-with-docker-reproducible"></a>
 </h3>
-<p>The bundled <code>Dockerfile</code> fixes the R / Bioconductor release (R 4.5 / Bioconductor 3.22) and system environment RNAflow is built against, so the heavy Bioconductor dependency stack resolves reliably — the recommended way to share, deploy, or reproduce an environment.</p>
+<p>The bundled <code>Dockerfile</code> fixes the R / Bioconductor release (R 4.5 / Bioconductor 3.22) and system environment RNAmel is built against, so the heavy Bioconductor dependency stack resolves reliably — the recommended way to share, deploy, or reproduce an environment.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">-t</span> rnaflow .</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-p</span> 8080:8080 rnaflow</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co"># open http://localhost:8080</span></span></code></pre></div>
@@ -240,9 +240,9 @@
 <div class="section level3">
 <h3 id="programmatic-api">Programmatic API<a class="anchor" aria-label="anchor" href="#programmatic-api"></a>
 </h3>
-<p>You can also use RNAflow’s core functions outside the app, for scripted pipelines:</p>
+<p>You can also use RNAmel’s core functions outside the app, for scripted pipelines:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAflow" class="external-link">RNAflow</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/KmBioChemo/RNAmel" class="external-link">RNAmel</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># 1. Read and validate inputs</span></span>
 <span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/read_counts.html">read_counts</a></span><span class="op">(</span><span class="st">"counts.csv"</span><span class="op">)</span></span>
@@ -313,18 +313,18 @@ sample3,Treatment,B
 <li>
 <strong>Phase 6</strong> ✅ (2026) — Linked volcano-table explorer, activity inference (decoupleR TF / pathway), AI-assisted interpretation, per-sample signatures (GSVA / ssGSEA), UMAP + interactive 3D PCA, interactive enrichment network (visNetwork), distribution figures (raincloud / beeswarm / alluvial), professional UI design system, and a reproducible Docker image</li>
 </ul>
-<p>Phases 1–6 are delivered, so RNAflow is feature-complete for its intended scope (downstream analysis of a bulk RNA-seq count matrix). Active development now focuses on maintenance, reproducibility, and reviewer feedback rather than new major features.</p>
-<p><strong>API stability.</strong> The exported functions documented on the <a href="https://KmBioChemo.github.io/RNAflow/">package website</a> are the supported programmatic interface; we aim to avoid breaking changes to them within a minor-version series. Unexported internal helpers may change at any time.</p>
+<p>Phases 1–6 are delivered, so RNAmel is feature-complete for its intended scope (downstream analysis of a bulk RNA-seq count matrix). Active development now focuses on maintenance, reproducibility, and reviewer feedback rather than new major features.</p>
+<p><strong>API stability.</strong> The exported functions documented on the <a href="https://KmBioChemo.github.io/RNAmel/">package website</a> are the supported programmatic interface; we aim to avoid breaking changes to them within a minor-version series. Unexported internal helpers may change at any time.</p>
 </div>
 <div class="section level2">
 <h2 id="limitations">Limitations<a class="anchor" aria-label="anchor" href="#limitations"></a>
 </h2>
-<p>RNAflow is an exploratory analysis platform, not a turnkey pipeline or a substitute for expert statistical review. In particular:</p>
+<p>RNAmel is an exploratory analysis platform, not a turnkey pipeline or a substitute for expert statistical review. In particular:</p>
 <ul>
 <li>
 <strong>Bulk RNA-seq only.</strong> It is not designed for single-cell or spatial data.</li>
 <li>
-<strong>No read processing.</strong> RNAflow starts from a count matrix; it does not perform FASTQ alignment or transcript quantification (use e.g. STAR / Salmon / featureCounts upstream).</li>
+<strong>No read processing.</strong> RNAmel starts from a count matrix; it does not perform FASTQ alignment or transcript quantification (use e.g. STAR / Salmon / featureCounts upstream).</li>
 <li>
 <strong>Not a replacement for expert statistical review.</strong> Design choices, batch handling, and model adequacy should be checked by someone familiar with the experiment.</li>
 <li>
@@ -350,8 +350,8 @@ sample3,Treatment,B
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/KmBioChemo/RNAflow/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/KmBioChemo/RNAflow/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/KmBioChemo/RNAmel/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/KmBioChemo/RNAmel/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -374,17 +374,17 @@ sample3,Treatment,B
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing RNAflow</a></li>
+<li><a href="authors.html#citation">Citing RNAmel</a></li>
 </ul>
 </div>
 
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
+<li>Karim Matmat <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0009-0009-8226-4846" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 <li>Tamara Pfanner <br><small class="roles"> Author </small>   </li>
 <li>Rafael P. Silveira <br><small class="roles"> Author </small>   </li>
 <li>Matthias P. Wymann <br><small class="roles"> Author </small>   </li>
-<li>Karim Matmat <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0009-0009-8226-4846" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
@@ -393,8 +393,8 @@ sample3,Treatment,B
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://doi.org/10.5281/zenodo.21493110" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21493110.svg" alt="DOI"></a></li>
-<li><a href="https://github.com/KmBioChemo/RNAflow/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/KmBioChemo/RNAflow/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://github.com/KmBioChemo/RNAflow/actions/workflows/pkgdown.yaml" class="external-link"><img src="https://github.com/KmBioChemo/RNAflow/actions/workflows/pkgdown.yaml/badge.svg" alt="pkgdown"></a></li>
+<li><a href="https://github.com/KmBioChemo/RNAmel/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/KmBioChemo/RNAmel/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/KmBioChemo/RNAmel/actions/workflows/pkgdown.yaml" class="external-link"><img src="https://github.com/KmBioChemo/RNAmel/actions/workflows/pkgdown.yaml/badge.svg" alt="pkgdown"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://opensource.org/licenses/MIT" class="external-link"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></li>
 </ul>
@@ -405,7 +405,7 @@ sample3,Treatment,B
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tamara Pfanner, Rafael P. Silveira, Matthias P. Wymann, Karim Matmat.</p>
+  <p>Developed by Karim Matmat, Tamara Pfanner, Rafael P. Silveira, Matthias P. Wymann.</p>
 </div>
 
 <div class="pkgdown-footer-right">

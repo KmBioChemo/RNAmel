@@ -14,7 +14,7 @@ fig_soft_threshold(sft, mode = c("exploration", "publication"))
 - sft:
 
   the list returned by
-  [`wgcna_pick_power()`](https://KmBioChemo.github.io/RNAflow/reference/wgcna_pick_power.md)
+  [`wgcna_pick_power()`](https://KmBioChemo.github.io/RNAmel/reference/wgcna_pick_power.md)
 
 - mode:
 

@@ -19,7 +19,7 @@ fig_upset(
 - sets:
 
   a named list of character vectors (e.g. from
-  [`contrast_sig_sets()`](https://KmBioChemo.github.io/RNAflow/reference/contrast_sig_sets.md))
+  [`contrast_sig_sets()`](https://KmBioChemo.github.io/RNAmel/reference/contrast_sig_sets.md))
 
 - min_size:
 

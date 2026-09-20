@@ -1,7 +1,7 @@
-# Alias for [`run_app()`](https://KmBioChemo.github.io/RNAflow/reference/run_app.md)
+# Alias for [`run_app()`](https://KmBioChemo.github.io/RNAmel/reference/run_app.md)
 
 Alias for
-[`run_app()`](https://KmBioChemo.github.io/RNAflow/reference/run_app.md)
+[`run_app()`](https://KmBioChemo.github.io/RNAmel/reference/run_app.md)
 
 ## Usage
 

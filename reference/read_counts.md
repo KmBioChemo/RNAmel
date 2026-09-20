@@ -28,7 +28,7 @@ read_counts(
 - validate:
 
   if TRUE, run
-  [`validate_counts()`](https://KmBioChemo.github.io/RNAflow/reference/validate_counts.md)
+  [`validate_counts()`](https://KmBioChemo.github.io/RNAmel/reference/validate_counts.md)
   before returning
 
 - strict_integer:

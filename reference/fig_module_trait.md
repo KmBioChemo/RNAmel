@@ -13,7 +13,7 @@ fig_module_trait(mt, mode = c("exploration", "publication"), text_size = 2.6)
 - mt:
 
   the list returned by
-  [`module_trait_cor()`](https://KmBioChemo.github.io/RNAflow/reference/module_trait_cor.md)
+  [`module_trait_cor()`](https://KmBioChemo.github.io/RNAmel/reference/module_trait_cor.md)
 
 - mode:
 

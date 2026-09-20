@@ -1,9 +1,9 @@
 # Interpret a DE contrast (+ enrichment) with Claude
 
 Convenience wrapper: builds the prompt with
-[`build_interpret_prompt()`](https://KmBioChemo.github.io/RNAflow/reference/build_interpret_prompt.md)
+[`build_interpret_prompt()`](https://KmBioChemo.github.io/RNAmel/reference/build_interpret_prompt.md)
 and sends it with
-[`call_claude()`](https://KmBioChemo.github.io/RNAflow/reference/call_claude.md).
+[`call_claude()`](https://KmBioChemo.github.io/RNAmel/reference/call_claude.md).
 
 ## Usage
 
@@ -31,7 +31,7 @@ interpret_results(
 - enrich:
 
   optional enrichment result list (see
-  [`summarize_enrich_for_ai()`](https://KmBioChemo.github.io/RNAflow/reference/summarize_enrich_for_ai.md))
+  [`summarize_enrich_for_ai()`](https://KmBioChemo.github.io/RNAmel/reference/summarize_enrich_for_ai.md))
 
 - organism:
 
@@ -65,5 +65,5 @@ interpret_results(
 ## Value
 
 the
-[`call_claude()`](https://KmBioChemo.github.io/RNAflow/reference/call_claude.md)
+[`call_claude()`](https://KmBioChemo.github.io/RNAmel/reference/call_claude.md)
 result list, with the `prompt` attached

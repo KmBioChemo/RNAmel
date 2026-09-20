@@ -1,6 +1,6 @@
-# RNAflow main UI
+# RNAmel main UI
 
-RNAflow main UI
+RNAmel main UI
 
 ## Usage
 

@@ -3,7 +3,7 @@
 Dispatches on object class so the multi-contrast views (ggplot volcano
 grid, pheatmap signature, ComplexHeatmap UpSet, eulerr Venn) all render
 through one call. Used inside `renderPlot` and
-[`save_compare()`](https://KmBioChemo.github.io/RNAflow/reference/save_compare.md).
+[`save_compare()`](https://KmBioChemo.github.io/RNAmel/reference/save_compare.md).
 
 ## Usage
 
@@ -16,7 +16,7 @@ draw_compare(obj)
 - obj:
 
   a figure object from the
-  [fig_compare](https://KmBioChemo.github.io/RNAflow/reference/fig_compare.md)
+  [fig_compare](https://KmBioChemo.github.io/RNAmel/reference/fig_compare.md)
   family
 
 ## Value

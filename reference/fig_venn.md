@@ -2,7 +2,7 @@
 
 Area-proportional Euler/Venn diagram via the eulerr package. Use for 2-4
 contrasts; for more, prefer
-[`fig_upset()`](https://KmBioChemo.github.io/RNAflow/reference/fig_upset.md).
+[`fig_upset()`](https://KmBioChemo.github.io/RNAmel/reference/fig_upset.md).
 
 ## Usage
 
@@ -21,7 +21,7 @@ fig_venn(
 - sets:
 
   a named list of character vectors (e.g. from
-  [`contrast_sig_sets()`](https://KmBioChemo.github.io/RNAflow/reference/contrast_sig_sets.md))
+  [`contrast_sig_sets()`](https://KmBioChemo.github.io/RNAmel/reference/contrast_sig_sets.md))
 
 - fill:
 

@@ -1,11 +1,11 @@
 # Significant-gene sets across contrasts
 
 Applies
-[`contrast_sig_genes()`](https://KmBioChemo.github.io/RNAflow/reference/contrast_sig_genes.md)
+[`contrast_sig_genes()`](https://KmBioChemo.github.io/RNAmel/reference/contrast_sig_genes.md)
 to every contrast in a named list. The result feeds
-[`fig_venn()`](https://KmBioChemo.github.io/RNAflow/reference/fig_venn.md)
+[`fig_venn()`](https://KmBioChemo.github.io/RNAmel/reference/fig_venn.md)
 and
-[`fig_upset()`](https://KmBioChemo.github.io/RNAflow/reference/fig_upset.md).
+[`fig_upset()`](https://KmBioChemo.github.io/RNAmel/reference/fig_upset.md).
 
 ## Usage
 

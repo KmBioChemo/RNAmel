@@ -8,7 +8,7 @@ Build a standalone HTML report for an analysis session
 build_report_html(
   project,
   file,
-  title = "RNAflow analysis report",
+  title = "RNAmel analysis report",
   generated = NULL
 )
 ```

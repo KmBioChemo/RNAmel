@@ -1,7 +1,7 @@
 # QC / diagnostics module
 
 Shiny module exposing the
-[fig_qc](https://KmBioChemo.github.io/RNAflow/reference/fig_qc.md)
+[fig_qc](https://KmBioChemo.github.io/RNAmel/reference/fig_qc.md)
 diagnostics: p-value histogram, MA plot, sample-correlation heatmap, and
 library sizes. Helps sanity-check a run before interpreting the results.
 

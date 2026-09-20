@@ -1,8 +1,8 @@
-# Getting started with RNAflow
+# Getting started with RNAmel
 
-RNAflow is a downstream bulk RNA-seq analysis platform, usable either as
+RNAmel is a downstream bulk RNA-seq analysis platform, usable either as
 an interactive Shiny app
-([`run_app()`](https://KmBioChemo.github.io/RNAflow/reference/run_app.md))
+([`run_app()`](https://KmBioChemo.github.io/RNAmel/reference/run_app.md))
 or as a set of pure, scriptable functions. This vignette is a
 **reproducible reference analysis**: the core steps below run on a
 bundled, published dataset so you can reproduce a real result end to
@@ -10,7 +10,7 @@ end.
 
 ``` r
 
-library(RNAflow)
+library(RNAmel)
 ```
 
 ## The data
@@ -22,9 +22,9 @@ with dexamethasone vs. control across four cell lines.
 ``` r
 
 counts <- read_counts(system.file("extdata", "demo_airway_counts.csv",
-                                  package = "RNAflow"))
+                                  package = "RNAmel"))
 meta   <- read_metadata(system.file("extdata", "demo_airway_metadata.csv",
-                                    package = "RNAflow"),
+                                    package = "RNAmel"),
                         counts_samples = colnames(counts))
 dim(counts)
 #> [1] 17190     8
@@ -38,9 +38,9 @@ head(meta)
 #> 6 SRR1039517       Dex N080611
 ```
 
-[`read_counts()`](https://KmBioChemo.github.io/RNAflow/reference/read_counts.md)
+[`read_counts()`](https://KmBioChemo.github.io/RNAmel/reference/read_counts.md)
 and
-[`read_metadata()`](https://KmBioChemo.github.io/RNAflow/reference/read_metadata.md)
+[`read_metadata()`](https://KmBioChemo.github.io/RNAmel/reference/read_metadata.md)
 run strict validation and fail fast with an explicit message on
 malformed input (negative values, duplicate gene IDs, missing rownames,
 sample mismatch, …).
@@ -62,19 +62,19 @@ res <- run_deseq2(
 #> converting counts to integer mode
 head(res[order(res$padj), ])
 #>         gene   baseMean log2FoldChange     lfcSE     stat        pvalue
-#> 6538  CACNB2   495.3581       3.275664 0.1326449 24.80377 8.163664e-136
+#> 6538  CACNB2   495.3581       3.275664 0.1326449 24.80377 8.163663e-136
 #> 3979 SPARCL1   997.6038       4.550562 0.1865863 24.70052 1.055901e-134
-#> 1056   DUSP1  3410.8040       2.933081 0.1219507 24.24829 6.893204e-130
+#> 1056   DUSP1  3410.8040       2.933081 0.1219507 24.24829 6.893203e-130
 #> 234   SAMHD1 12705.8482       3.753364 0.1576715 24.08727 3.398689e-128
-#> 1618    MAOA  2343.3913       3.336101 0.1430166 23.58574 5.398709e-123
+#> 1618    MAOA  2343.3913       3.336101 0.1430166 23.58574 5.398708e-123
 #> 253     GPX3 12292.3589       3.711423 0.1692351 22.30297 3.457747e-110
 #>               padj
-#> 6538 1.240061e-131
-#> 3979 8.019567e-131
-#> 1056 3.490259e-126
+#> 6538 1.240060e-131
+#> 3979 8.019566e-131
+#> 1056 3.490258e-126
 #> 234  1.290652e-124
 #> 1618 1.640128e-119
-#> 253  8.753863e-107
+#> 253  8.753862e-107
 sum(res$padj < 0.05 & abs(res$log2FoldChange) > 1, na.rm = TRUE)  # sig genes
 #> [1] 770
 ```
@@ -94,9 +94,9 @@ fig_volcano(res, lfc_thr = 1, padj_thr = 0.05, n_label = 15,
 Every figure function takes a `mode = c("exploration", "publication")`
 argument; publication mode uses 8-pt Helvetica, strict axes, and no
 grid, ready for a figure panel. Interactive versions
-([`fig_volcano_interactive()`](https://KmBioChemo.github.io/RNAflow/reference/fig_volcano_interactive.md),
-[`fig_pca()`](https://KmBioChemo.github.io/RNAflow/reference/fig_pca.md),
-[`fig_umap()`](https://KmBioChemo.github.io/RNAflow/reference/fig_umap.md),
+([`fig_volcano_interactive()`](https://KmBioChemo.github.io/RNAmel/reference/fig_volcano_interactive.md),
+[`fig_pca()`](https://KmBioChemo.github.io/RNAmel/reference/fig_pca.md),
+[`fig_umap()`](https://KmBioChemo.github.io/RNAmel/reference/fig_umap.md),
 …) return plotly widgets for exploration.
 
 For a heatmap and a PCA / UMAP sample overview you also need a
@@ -165,5 +165,5 @@ Everything above is also available point-and-click in the app:
 run_app()
 ```
 
-See the [package website](https://KmBioChemo.github.io/RNAflow/) for the
+See the [package website](https://KmBioChemo.github.io/RNAmel/) for the
 full function reference and the README for the feature overview.

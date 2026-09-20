@@ -1,7 +1,7 @@
 # Convert a bare vector of gene identifiers to gene symbols
 
 Like
-[`map_de_to_symbols()`](https://KmBioChemo.github.io/RNAflow/reference/map_de_to_symbols.md)
+[`map_de_to_symbols()`](https://KmBioChemo.github.io/RNAmel/reference/map_de_to_symbols.md)
 but for a plain character vector (e.g. WGCNA module genes or the
 co-expression universe). If the IDs look like Ensembl or ENTREZ, map
 them to symbols via the organism's OrgDb (stripping Ensembl version

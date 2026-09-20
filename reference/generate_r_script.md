@@ -18,7 +18,7 @@ generate_r_script(
 - project:
 
   a project list (from
-  [`empty_project()`](https://KmBioChemo.github.io/RNAflow/reference/empty_project.md)
+  [`empty_project()`](https://KmBioChemo.github.io/RNAmel/reference/empty_project.md)
   / the app session); uses `$organism` and `$contrasts` (the contrast
   store)
 

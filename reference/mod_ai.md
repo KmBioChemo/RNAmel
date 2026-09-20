@@ -1,7 +1,7 @@
 # AI interpretation module
 
 Shiny module wrapping the pure
-[ai_interpret](https://KmBioChemo.github.io/RNAflow/reference/ai_interpret.md)
+[ai_interpret](https://KmBioChemo.github.io/RNAmel/reference/ai_interpret.md)
 layer. Sends a compact summary of the active contrast (top gene names +
 fold-changes, and the latest enrichment terms) to Anthropic's Claude API
 and renders the returned biological narrative. The API key lives only in
@@ -37,7 +37,7 @@ mod_ai_server(
 
   optional reactive returning the latest enrichment result list
   (`method`, `table`), as exposed by
-  [`mod_enrich_server()`](https://KmBioChemo.github.io/RNAflow/reference/mod_enrich.md)
+  [`mod_enrich_server()`](https://KmBioChemo.github.io/RNAmel/reference/mod_enrich.md)
 
 - organism_reactive:
 

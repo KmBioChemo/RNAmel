@@ -1,7 +1,7 @@
 # Save a comparison figure to disk
 
 Format-aware export for any object produced by the
-[fig_compare](https://KmBioChemo.github.io/RNAflow/reference/fig_compare.md)
+[fig_compare](https://KmBioChemo.github.io/RNAmel/reference/fig_compare.md)
 family.
 
 ## Usage

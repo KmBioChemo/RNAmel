@@ -13,9 +13,9 @@ enrich_network_data(df, n = 30)
 - df:
 
   a data.frame from
-  [`run_gsea()`](https://KmBioChemo.github.io/RNAflow/reference/run_gsea.md)
+  [`run_gsea()`](https://KmBioChemo.github.io/RNAmel/reference/run_gsea.md)
   (uses `leadingEdge`) or
-  [`run_ora()`](https://KmBioChemo.github.io/RNAflow/reference/run_ora.md)
+  [`run_ora()`](https://KmBioChemo.github.io/RNAmel/reference/run_ora.md)
   (uses `geneID`)
 
 - n:

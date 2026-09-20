@@ -13,12 +13,12 @@ module_trait_cor(MEs, traits)
 - MEs:
 
   module eigengenes (samples x modules) from
-  [`run_wgcna()`](https://KmBioChemo.github.io/RNAflow/reference/run_wgcna.md)
+  [`run_wgcna()`](https://KmBioChemo.github.io/RNAmel/reference/run_wgcna.md)
 
 - traits:
 
   numeric trait matrix from
-  [`build_traits()`](https://KmBioChemo.github.io/RNAflow/reference/build_traits.md)
+  [`build_traits()`](https://KmBioChemo.github.io/RNAmel/reference/build_traits.md)
 
 ## Value
 

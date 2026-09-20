@@ -18,7 +18,7 @@ wgcna_pick_power(
 - datExpr:
 
   samples x genes matrix from
-  [`wgcna_datexpr()`](https://KmBioChemo.github.io/RNAflow/reference/wgcna_datexpr.md)
+  [`wgcna_datexpr()`](https://KmBioChemo.github.io/RNAmel/reference/wgcna_datexpr.md)
 
 - powers:
 

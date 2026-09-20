@@ -22,7 +22,7 @@ mod_project_server(id, data_mod, contrast_store, settings_store = NULL)
 - data_mod:
 
   the value returned by
-  [`mod_data_server()`](https://KmBioChemo.github.io/RNAflow/reference/mod_data.md)
+  [`mod_data_server()`](https://KmBioChemo.github.io/RNAmel/reference/mod_data.md)
   (must expose `set_state`)
 
 - contrast_store:

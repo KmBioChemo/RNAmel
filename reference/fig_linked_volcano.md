@@ -20,7 +20,7 @@ fig_linked_volcano(
   a
   [`crosstalk::SharedData`](https://rdrr.io/pkg/crosstalk/man/SharedData.html)
   wrapping
-  [`linked_volcano_df()`](https://KmBioChemo.github.io/RNAflow/reference/linked_volcano_df.md)
+  [`linked_volcano_df()`](https://KmBioChemo.github.io/RNAmel/reference/linked_volcano_df.md)
   output
 
 - col_up, col_down, col_ns:

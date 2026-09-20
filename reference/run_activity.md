@@ -24,9 +24,9 @@ run_activity(
 - network:
 
   a prior-knowledge network (from
-  [`get_tf_network()`](https://KmBioChemo.github.io/RNAflow/reference/get_tf_network.md)
+  [`get_tf_network()`](https://KmBioChemo.github.io/RNAmel/reference/get_tf_network.md)
   or
-  [`get_pathway_network()`](https://KmBioChemo.github.io/RNAflow/reference/get_pathway_network.md))
+  [`get_pathway_network()`](https://KmBioChemo.github.io/RNAmel/reference/get_pathway_network.md))
 
 - method:
 
@@ -40,7 +40,7 @@ run_activity(
 - by:
 
   ranking metric passed to
-  [`rank_genes()`](https://KmBioChemo.github.io/RNAflow/reference/rank_genes.md)
+  [`rank_genes()`](https://KmBioChemo.github.io/RNAmel/reference/rank_genes.md)
 
 - min_size:
 

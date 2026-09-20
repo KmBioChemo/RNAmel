@@ -17,7 +17,7 @@ activity_input(de, by = "stat")
 - by:
 
   ranking metric passed to
-  [`rank_genes()`](https://KmBioChemo.github.io/RNAflow/reference/rank_genes.md)
+  [`rank_genes()`](https://KmBioChemo.github.io/RNAmel/reference/rank_genes.md)
 
 ## Value
 

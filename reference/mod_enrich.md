@@ -1,7 +1,7 @@
 # Functional enrichment module
 
 Shiny module wrapping the
-[analysis_enrich](https://KmBioChemo.github.io/RNAflow/reference/analysis_enrich.md)
+[analysis_enrich](https://KmBioChemo.github.io/RNAmel/reference/analysis_enrich.md)
 layer. Runs GSEA (against MSigDB collections) or ORA (GO / KEGG /
 Reactome) on the active contrast, and renders dotplot / bar / GSEA curve
 plus a results table.

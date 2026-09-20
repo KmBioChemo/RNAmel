@@ -2,7 +2,7 @@
 
 Bundles the live analysis objects into the canonical project structure
 (see
-[`empty_project()`](https://KmBioChemo.github.io/RNAflow/reference/empty_project.md)).
+[`empty_project()`](https://KmBioChemo.github.io/RNAmel/reference/empty_project.md)).
 Shared by the project-manager and report modules.
 
 ## Usage

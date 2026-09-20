@@ -20,7 +20,7 @@ fig_activity_bar(
 - activity:
 
   an activity data.frame (`source`, `score`, `padj`) from
-  [`run_activity()`](https://KmBioChemo.github.io/RNAflow/reference/run_activity.md)
+  [`run_activity()`](https://KmBioChemo.github.io/RNAmel/reference/run_activity.md)
 
 - n:
 

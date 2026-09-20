@@ -1,7 +1,7 @@
 # Interactive volcano plot (plotly)
 
 Same data as
-[`fig_volcano()`](https://KmBioChemo.github.io/RNAflow/reference/fig_volcano.md)
+[`fig_volcano()`](https://KmBioChemo.github.io/RNAmel/reference/fig_volcano.md)
 but rendered as a plotly figure with hover tooltips and zoom. Always
 uses exploration-style sizing.
 

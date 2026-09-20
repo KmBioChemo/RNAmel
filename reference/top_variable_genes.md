@@ -15,7 +15,7 @@ top_variable_genes(mat, n = 50)
 - mat:
 
   a gene x contrast matrix (from
-  [`contrast_lfc_matrix()`](https://KmBioChemo.github.io/RNAflow/reference/contrast_lfc_matrix.md))
+  [`contrast_lfc_matrix()`](https://KmBioChemo.github.io/RNAmel/reference/contrast_lfc_matrix.md))
 
 - n:
 

@@ -1,7 +1,7 @@
 # Heatmap of per-sample gene-set scores
 
 Draws the
-[`decoupleR::run_gsva()`](https://saezlab.github.io/decoupleR/reference/run_gsva.html)
+[`run_gsva()`](https://KmBioChemo.github.io/RNAmel/reference/run_gsva.md)
 score matrix (gene sets x samples) as a clustered heatmap, keeping the
 most variable sets and optionally annotating samples by a metadata
 group.
@@ -26,7 +26,7 @@ fig_gsva_heatmap(
 - scores:
 
   a numeric matrix (gene sets x samples) from
-  [`decoupleR::run_gsva()`](https://saezlab.github.io/decoupleR/reference/run_gsva.html)
+  [`run_gsva()`](https://KmBioChemo.github.io/RNAmel/reference/run_gsva.md)
 
 - metadata:
 

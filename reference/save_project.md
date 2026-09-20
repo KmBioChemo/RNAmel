@@ -13,7 +13,7 @@ save_project(project, path)
 - project:
 
   a project list (from
-  [`empty_project()`](https://KmBioChemo.github.io/RNAflow/reference/empty_project.md)
+  [`empty_project()`](https://KmBioChemo.github.io/RNAmel/reference/empty_project.md)
   or session)
 
 - path:

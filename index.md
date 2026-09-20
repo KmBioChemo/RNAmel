@@ -1,9 +1,9 @@
-# RNAflow
+# RNAmel
 
 > Downstream bulk RNA-seq analysis platform — interactive Shiny app,
 > packaged as an R package.
 
-**RNAflow** is a modular Shiny application built as a proper R package
+**RNAmel** is a modular Shiny application built as a proper R package
 for downstream bulk RNA-seq analysis. It takes raw count matrices and
 sample metadata as input and provides differential expression (DESeq2),
 QC diagnostics, sample overviews (PCA / UMAP / 3D PCA), a linked
@@ -19,7 +19,7 @@ Supported organisms: **human**, **mouse**, **rat**.
 ## Contents
 
 - [Gallery](#gallery)
-- [Why RNAflow?](#why-rnaflow)
+- [Why RNAmel?](#why-rnaflow)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Input formats](#input-formats)
@@ -59,7 +59,7 @@ comparison](reference/figures/gallery-multi-contrast.png)
 
 Multi-contrast comparison
 
-**Consistency & regression checks** — RNAflow reproduces its own results
+**Consistency & regression checks** — RNAmel reproduces its own results
 exactly (round-trip through the exported R script), all-pairwise
 contrasts match a single shared fit, and fold changes concord with
 limma-voom on the *airway* demo. These are internal consistency and
@@ -70,11 +70,11 @@ statistical methods.
 
 Consistency checks
 
-## Why RNAflow?
+## Why RNAmel?
 
 Downstream RNA-seq analysis is often done either with bespoke scripts —
 flexible, but written for a single project and harder to reuse and audit
-— or with interactive applications that prioritise ease of use. RNAflow
+— or with interactive applications that prioritise ease of use. RNAmel
 aims to combine both: an interactive interface backed by a tested,
 reusable R package, with:
 
@@ -98,20 +98,20 @@ reusable R package, with:
 if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")
 if (!require("devtools",    quietly = TRUE)) install.packages("devtools")
 
-# Then install RNAflow (see "Bioconductor dependencies" below for the heavy deps):
-devtools::install_github("KmBioChemo/RNAflow")
+# Then install RNAmel (see "Bioconductor dependencies" below for the heavy deps):
+devtools::install_github("KmBioChemo/RNAmel")
 ```
 
 Or, from a local clone:
 
 ``` r
 
-devtools::install_local("path/to/RNAflow")
+devtools::install_local("path/to/RNAmel")
 ```
 
 ### Bioconductor dependencies
 
-RNAflow uses several Bioconductor packages. Install them first:
+RNAmel uses several Bioconductor packages. Install them first:
 
 ``` r
 
@@ -132,7 +132,7 @@ only do steps 1–3 once per computer.
 
 #### 1. Install R
 
-R is the language RNAflow runs on. Download the latest R (4.4 or newer)
+R is the language RNAmel runs on. Download the latest R (4.4 or newer)
 for your operating system from **<https://cran.r-project.org/>** and run
 the installer with the default options.
 
@@ -193,8 +193,8 @@ BiocManager::install(c(
   "decoupleR", "OmnipathR"
 ))
 
-# c) RNAflow itself (pulls in the remaining CRAN packages automatically)
-devtools::install_github("KmBioChemo/RNAflow")
+# c) RNAmel itself (pulls in the remaining CRAN packages automatically)
+devtools::install_github("KmBioChemo/RNAmel")
 ```
 
 > If you are asked *“Do you want to install from sources the packages
@@ -204,14 +204,14 @@ devtools::install_github("KmBioChemo/RNAflow")
 
 ``` r
 
-library(RNAflow)
+library(RNAmel)
 run_app()
 ```
 
-Your web browser opens with RNAflow running locally. Load the bundled
+Your web browser opens with RNAmel running locally. Load the bundled
 demo data (see [Demo datasets](#demo-datasets)) to try it immediately.
 
-> **Note on activity inference (TF / pathway):** RNAflow ships offline
+> **Note on activity inference (TF / pathway):** RNAmel ships offline
 > copies of the human CollecTRI and PROGENy networks, so
 > transcription-factor and pathway activity work for human even when the
 > OmniPath web service is down — no `OmnipathR` needed. The `decoupleR`
@@ -225,14 +225,14 @@ demo data (see [Demo datasets](#demo-datasets)) to try it immediately.
 
 ``` r
 
-library(RNAflow)
+library(RNAmel)
 run_app()
 ```
 
 ### Run with Docker (reproducible)
 
 The bundled `Dockerfile` fixes the R / Bioconductor release (R 4.5 /
-Bioconductor 3.22) and system environment RNAflow is built against, so
+Bioconductor 3.22) and system environment RNAmel is built against, so
 the heavy Bioconductor dependency stack resolves reliably — the
 recommended way to share, deploy, or reproduce an environment.
 
@@ -248,12 +248,12 @@ for details).
 
 ### Programmatic API
 
-You can also use RNAflow’s core functions outside the app, for scripted
+You can also use RNAmel’s core functions outside the app, for scripted
 pipelines:
 
 ``` r
 
-library(RNAflow)
+library(RNAmel)
 
 # 1. Read and validate inputs
 counts <- read_counts("counts.csv")
@@ -340,27 +340,27 @@ from their Bioconductor sources):
   (raincloud / beeswarm / alluvial), professional UI design system, and
   a reproducible Docker image
 
-Phases 1–6 are delivered, so RNAflow is feature-complete for its
-intended scope (downstream analysis of a bulk RNA-seq count matrix).
-Active development now focuses on maintenance, reproducibility, and
-reviewer feedback rather than new major features.
+Phases 1–6 are delivered, so RNAmel is feature-complete for its intended
+scope (downstream analysis of a bulk RNA-seq count matrix). Active
+development now focuses on maintenance, reproducibility, and reviewer
+feedback rather than new major features.
 
 **API stability.** The exported functions documented on the [package
-website](https://KmBioChemo.github.io/RNAflow/) are the supported
+website](https://KmBioChemo.github.io/RNAmel/) are the supported
 programmatic interface; we aim to avoid breaking changes to them within
 a minor-version series. Unexported internal helpers may change at any
 time.
 
 ## Limitations
 
-RNAflow is an exploratory analysis platform, not a turnkey pipeline or a
+RNAmel is an exploratory analysis platform, not a turnkey pipeline or a
 substitute for expert statistical review. In particular:
 
 - **Bulk RNA-seq only.** It is not designed for single-cell or spatial
   data.
-- **No read processing.** RNAflow starts from a count matrix; it does
-  not perform FASTQ alignment or transcript quantification (use
-  e.g. STAR / Salmon / featureCounts upstream).
+- **No read processing.** RNAmel starts from a count matrix; it does not
+  perform FASTQ alignment or transcript quantification (use e.g. STAR /
+  Salmon / featureCounts upstream).
 - **Not a replacement for expert statistical review.** Design choices,
   batch handling, and model adequacy should be checked by someone
   familiar with the experiment.

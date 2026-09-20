@@ -1,6 +1,6 @@
-# Launch the RNAflow Shiny application
+# Launch the RNAmel Shiny application
 
-Runs the full RNAflow Shiny app, which assembles all modules (data, DE,
+Runs the full RNAmel Shiny app, which assembles all modules (data, DE,
 volcano, heatmap, PCA, ...) into a single interface.
 
 ## Usage
@@ -27,6 +27,6 @@ invisibly returns the Shiny app object
 
 ``` r
 if (FALSE) { # \dontrun{
-  RNAflow::run_app()
+  RNAmel::run_app()
 } # }
 ```

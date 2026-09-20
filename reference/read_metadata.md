@@ -21,7 +21,7 @@ read_metadata(path, ext = NULL, validate = TRUE, counts_samples = NULL)
 - validate:
 
   if TRUE, run
-  [`validate_metadata()`](https://KmBioChemo.github.io/RNAflow/reference/validate_metadata.md)
+  [`validate_metadata()`](https://KmBioChemo.github.io/RNAmel/reference/validate_metadata.md)
 
 - counts_samples:
 
