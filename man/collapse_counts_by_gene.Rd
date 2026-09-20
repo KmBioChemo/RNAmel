@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils_io.R
 \name{collapse_counts_by_gene}
 \alias{collapse_counts_by_gene}
-\title{Read a counts matrix from a file}
+\title{Collapse rows that share the same gene ID down to one row per gene}
 \usage{
 collapse_counts_by_gene(df, method = c("sum", "max"))
 }
@@ -18,12 +18,6 @@ RNA-seq counts: the result stays integer and preserves library size);
 a data.frame with one row per unique gene ID
 }
 \description{
-Supports CSV, TSV, TXT, XLSX, XLS. The first column is treated as the
-gene ID and set as rownames; remaining columns must be samples.
-}
-\details{
-Collapse rows that share the same gene ID down to one row per gene
-
 Duplicate gene identifiers are common in real count matrices (several
 Ensembl IDs mapping to the same symbol). This merges them so the matrix can
 be used downstream.

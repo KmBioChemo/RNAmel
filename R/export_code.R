@@ -72,32 +72,76 @@ generate_r_script <- function(project,
     # suffix, so disambiguate to stop two `res_*` objects from clashing.
     all_vn <- make.unique(
       paste0("res_", vapply(names(store), r_name, character(1))), sep = "_")
-    for (i in seq_along(store)) {
-      lbl <- names(store)[i]
-      p <- store[[i]]$params %||% list()
-      vn <- all_vn[i]
-      var_names <- c(var_names, vn)
-      is_computed <- !is.null(p$design_var)
-      computed <- c(computed, is_computed)
-      if (is_computed) {
-        design_terms <- c(p$covariates, p$design_var)   # covariates first
-        add(sprintf("# %s", lbl),
-            sprintf("%s <- run_deseq2(", vn),
+    params_of <- lapply(store, function(s) s$params %||% list())
+    computed  <- vapply(params_of, function(p) !is.null(p$design_var), logical(1))
+    is_ap     <- vapply(params_of, function(p) isTRUE(p$all_pairs), logical(1))
+    var_names <- all_vn
+
+    # Reproduce the shrinkage estimator actually used in the session (recorded as
+    # `shrink_used`), not run_deseq2()'s default -- otherwise an all-pairwise
+    # contrast fitted with `normal` would be re-run with `apeglm`.
+    shrink_args <- function(p) {
+      su <- p$shrink_used %||% ""
+      if (isTRUE(p$shrink) && su %in% c("apeglm", "ashr", "normal"))
+        sprintf('shrink = TRUE, shrink_type = "%s"', su)
+      else
+        sprintf("shrink = %s", isTRUE(p$shrink))
+    }
+
+    # (a) All-pairwise contrasts: one shared DESeq2 fit, then read off each pair
+    # (mirrors the app's run_deseq2_all_pairs()). Group by design and settings.
+    ap_idx <- which(computed & is_ap)
+    if (length(ap_idx)) {
+      sig <- vapply(ap_idx, function(i) {
+        p <- params_of[[i]]
+        paste(p$design_var, paste(p$covariates, collapse = ","),
+              isTRUE(p$shrink), p$shrink_used %||% "",
+              p$min_count %||% 10, p$alpha %||% 0.05, sep = "|")
+      }, character(1))
+      groups <- split(ap_idx, sig)
+      gi <- 0L
+      for (g in groups) {
+        gi <- gi + 1L
+        dev <- if (length(groups) == 1L) "de_all" else sprintf("de_all_%d", gi)
+        p0 <- params_of[[g[1]]]
+        design_terms <- c(p0$covariates, p0$design_var)
+        add("# All pairwise contrasts (single shared DESeq2 fit)",
+            sprintf("%s <- run_deseq2_all_pairs(", dev),
             "  counts, meta,",
-            sprintf("  design   = ~%s,",
+            sprintf("  design     = ~%s,",
                     paste(sprintf("`%s`", design_terms), collapse = " + ")),
-            sprintf("  contrast = c(%s, %s, %s),",
-                    q_str(p$design_var), q_str(p$treated), q_str(p$reference)),
-            sprintf("  shrink = %s, min_count = %s, alpha = %s",
-                    isTRUE(p$shrink), p$min_count %||% 10, p$alpha %||% 0.05),
-            ")", "")
-      } else {
-        # Uploaded DE table: RNAmel cannot recompute it. Define the object via
-        # a real (user-completed) read call so downstream steps stay valid.
-        add(sprintf("# %s (uploaded DE table -- RNAmel cannot recompute it)", lbl),
-            sprintf("%s <- read_de_results(%s)", vn,
-                    q_str("PATH_TO_YOUR_DE_TABLE.csv")), "")
+            sprintf("  design_var = %s,", q_str(p0$design_var)),
+            sprintf("  %s, min_count = %s, alpha = %s",
+                    shrink_args(p0), p0$min_count %||% 10, p0$alpha %||% 0.05),
+            ")")
+        for (i in g)
+          add(sprintf("%s <- %s[[%s]]", all_vn[i], dev, q_str(names(store)[i])))
+        add("")
       }
+    }
+
+    # (b) Single computed contrasts: one run_deseq2() call each.
+    for (i in which(computed & !is_ap)) {
+      p <- params_of[[i]]
+      design_terms <- c(p$covariates, p$design_var)   # covariates first
+      add(sprintf("# %s", names(store)[i]),
+          sprintf("%s <- run_deseq2(", all_vn[i]),
+          "  counts, meta,",
+          sprintf("  design   = ~%s,",
+                  paste(sprintf("`%s`", design_terms), collapse = " + ")),
+          sprintf("  contrast = c(%s, %s, %s),",
+                  q_str(p$design_var), q_str(p$treated), q_str(p$reference)),
+          sprintf("  %s, min_count = %s, alpha = %s",
+                  shrink_args(p), p$min_count %||% 10, p$alpha %||% 0.05),
+          ")", "")
+    }
+
+    # (c) Uploaded DE tables: RNAmel cannot recompute them.
+    for (i in which(!computed)) {
+      add(sprintf("# %s (uploaded DE table -- RNAmel cannot recompute it)",
+                  names(store)[i]),
+          sprintf("%s <- read_de_results(%s)", all_vn[i],
+                  q_str("PATH_TO_YOUR_DE_TABLE.csv")), "")
     }
   }
   add("")

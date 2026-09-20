@@ -7,7 +7,7 @@
 enrich_plot_df(df, n = 20)
 }
 \arguments{
-\item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} or \code{\link[decoupleR:run_ora]{run_ora()}}}
+\item{df}{a data.frame from \code{\link[=run_gsea]{run_gsea()}} or \code{\link[=run_ora]{run_ora()}}}
 
 \item{n}{keep the top \code{n} terms by padj}
 }

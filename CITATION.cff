@@ -3,6 +3,11 @@ message: "If you use RNAmel, please cite it using this metadata."
 title: "RNA Modular Expression Laboratory (RNAmel): an integrated R/Shiny platform for reproducible bulk RNA-seq analysis and interpretation"
 type: software
 authors:
+  - family-names: Matmat
+    given-names: Karim
+    email: karim.matmat@unibas.ch
+    orcid: "https://orcid.org/0009-0009-8226-4846"
+    affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
   - family-names: Pfanner
     given-names: Tamara
     affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
@@ -11,11 +16,6 @@ authors:
     affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
   - family-names: Wymann
     given-names: "Matthias P."
-    affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
-  - family-names: Matmat
-    given-names: Karim
-    email: karim.matmat@unibas.ch
-    orcid: "https://orcid.org/0009-0009-8226-4846"
     affiliation: "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
 repository-code: "https://github.com/KmBioChemo/RNAmel"
 url: "https://KmBioChemo.github.io/RNAmel/"

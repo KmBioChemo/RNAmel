@@ -13,7 +13,7 @@ module_gene_list(wg, exclude_grey = TRUE)
 }
 \value{
 a named list of character vectors (module color -> genes), ready
-to feed \code{\link[decoupleR:run_ora]{run_ora()}} for module-to-pathway enrichment
+to feed \code{\link[=run_ora]{run_ora()}} for module-to-pathway enrichment
 }
 \description{
 Module gene lists

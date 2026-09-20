@@ -17,6 +17,11 @@
   ],
   "creators": [
     {
+      "name": "Matmat, Karim",
+      "affiliation": "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland",
+      "orcid": "0009-0009-8226-4846"
+    },
+    {
       "name": "Pfanner, Tamara",
       "affiliation": "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
     },
@@ -27,11 +32,6 @@
     {
       "name": "Wymann, Matthias P.",
       "affiliation": "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland"
-    },
-    {
-      "name": "Matmat, Karim",
-      "affiliation": "Department of Biomedicine, University of Basel, Mattenstrasse 28, CH-4058 Basel, Switzerland",
-      "orcid": "0009-0009-8226-4846"
     }
   ]
 }

@@ -7,11 +7,6 @@
 #' @keywords internal
 NULL
 
-#' Read a counts matrix from a file
-#'
-#' Supports CSV, TSV, TXT, XLSX, XLS. The first column is treated as the
-#' gene ID and set as rownames; remaining columns must be samples.
-#'
 #' Collapse rows that share the same gene ID down to one row per gene
 #'
 #' Duplicate gene identifiers are common in real count matrices (several
@@ -46,6 +41,11 @@ collapse_counts_by_gene <- function(df, method = c("sum", "max")) {
   out
 }
 
+#' Read a counts matrix from a file
+#'
+#' Supports CSV, TSV, TXT, XLSX, XLS. The first column is treated as the
+#' gene ID and set as rownames; remaining columns must be samples.
+#'
 #' @param path path to the file
 #' @param ext optional file extension override (auto-detected if NULL)
 #' @param validate if TRUE, run [validate_counts()] before returning

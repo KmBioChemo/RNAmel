@@ -124,7 +124,8 @@ mod_de_server <- function(id, data_mod, contrast_store = NULL) {
               st <- contrast_store_upsert(st, lab, lst[[lab]], params = list(
                 design_var = input$design_var,
                 treated = unname(pr["treated"]), reference = unname(pr["reference"]),
-                covariates = covs, shrink = isTRUE(input$shrink),
+                covariates = covs, all_pairs = TRUE,
+                shrink = isTRUE(input$shrink),
                 shrink_used = attr(lst[[lab]], "shrink") %||% "none",
                 min_count = as.integer(input$min_count %||% 10),
                 alpha = as.numeric(input$alpha %||% 0.05)))

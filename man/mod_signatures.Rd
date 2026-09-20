@@ -31,7 +31,7 @@ mod_signatures_server(
 \description{
 A per-sample gene-set scoring tab: pick an MSigDB collection and a method
 (GSVA or ssGSEA), score every sample, and view the sets x samples signature
-matrix as an annotated heatmap. Thin Shiny wrapper over \code{\link[decoupleR:run_gsva]{run_gsva()}} /
+matrix as an annotated heatmap. Thin Shiny wrapper over \code{\link[=run_gsva]{run_gsva()}} /
 \code{\link[=fig_gsva_heatmap]{fig_gsva_heatmap()}} (both guarded on the optional \pkg{GSVA} dependency).
 }
 \keyword{internal}

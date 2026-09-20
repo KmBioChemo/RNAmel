@@ -21,3 +21,4 @@
 ^\.Rprofile$
 ^THIRD_PARTY_NOTICES\.md$
 ^SECURITY\.md$
+^\.zenodo\.json$

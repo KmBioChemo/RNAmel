@@ -91,3 +91,33 @@ test_that("script escapes special characters and reflects the log2 fallback", {
   expect_silent(parse(text = code))                                 # embedded quote escaped
   expect_match(code, "norm    <- log2(counts + 1)", fixed = TRUE)
 })
+
+test_that("exported single contrast reproduces the recorded shrinkage estimator", {
+  p <- empty_project("x"); p$organism <- "human"
+  res <- data.frame(gene = "g", log2FoldChange = 1, padj = 0.01)
+  p$contrasts <- contrast_store_upsert(
+    p$contrasts, "cond: A vs B", res,
+    list(design_var = "cond", treated = "A", reference = "B",
+         shrink = TRUE, shrink_used = "apeglm", min_count = 10, alpha = 0.05))
+  code <- generate_r_script(p)
+  expect_silent(parse(text = code))
+  expect_match(code, 'shrink = TRUE, shrink_type = "apeglm"', fixed = TRUE)
+})
+
+test_that("all-pairwise export uses one shared fit with the recorded estimator", {
+  p <- empty_project("x"); p$organism <- "human"
+  res <- data.frame(gene = "g", log2FoldChange = 1, padj = 0.01)
+  mk <- function(tr, rf) list(design_var = "grp", treated = tr, reference = rf,
+                              covariates = character(0), all_pairs = TRUE,
+                              shrink = TRUE, shrink_used = "normal",
+                              min_count = 10, alpha = 0.05)
+  p$contrasts <- contrast_store_upsert(p$contrasts, "grp: A vs B", res, mk("A", "B"))
+  p$contrasts <- contrast_store_upsert(p$contrasts, "grp: A vs C", res, mk("A", "C"))
+  code <- generate_r_script(p)
+  expect_silent(parse(text = code))
+  expect_match(code, "run_deseq2_all_pairs(", fixed = TRUE)      # shared fit
+  expect_match(code, 'shrink_type = "normal"', fixed = TRUE)     # exact estimator
+  # each pair is read off the shared fit, not re-run individually
+  expect_match(code, 'res_grp_A_vs_B <- de_all[["grp: A vs B"]]', fixed = TRUE)
+  expect_match(code, 'res_grp_A_vs_C <- de_all[["grp: A vs C"]]', fixed = TRUE)
+})

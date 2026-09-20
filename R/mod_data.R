@@ -32,7 +32,7 @@ mod_data_ui <- function(id) {
           width = "100%")
       ),
       shiny::p(class = "rf-microcopy",
-               "Real published data bundled with the package — loads counts ",
+               "Real published data bundled with the package \u2014 loads counts ",
                "and metadata in one click, no download needed."),
       shiny::tags$hr(style = "margin:8px 0;"),
       shiny::selectInput(ns("organism"), "Organism",
@@ -96,7 +96,7 @@ mod_data_server <- function(id) {
         de_r(NULL)
         shiny::updateSelectInput(session, "organism", selected = organism)
         shiny::showNotification(
-          sprintf("Demo loaded: %d genes × %d samples.",
+          sprintf("Demo loaded: %d genes \u00d7 %d samples.",
                   nrow(m), ncol(m)),
           type = "message", duration = 5)
       }, error = function(e) {
