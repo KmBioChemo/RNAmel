@@ -17,7 +17,7 @@ Supported organisms: **human**, **mouse**, **rat**.
 ## Contents
 
 - [Gallery](#gallery)
-- [Why RNAmel?](#why-rnaflow)
+- [Why RNAmel?](#why-rnamel)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Input formats](#input-formats)
@@ -208,13 +208,42 @@ Bioconductor dependency stack resolves reliably — the recommended way to share
 deploy, or reproduce an environment.
 
 ```bash
-docker build -t rnaflow .
-docker run --rm -p 8080:8080 rnaflow
+docker build -t rnamel .
+docker run --rm -p 8080:8080 rnamel
 # open http://localhost:8080
 ```
 
-For byte-for-byte package pinning on top of the container, generate an optional
-`renv.lock` with `Rscript dev/make_renv_lock.R` (see that file for details).
+The repository also ships an `renv.lock` capturing the exact package versions,
+for byte-for-byte reproducibility on top of the container (restore it with
+`renv::restore()`; regenerate it with `Rscript dev/make_renv_lock.R`).
+
+### Offline / air-gapped installation
+
+For machines with limited or no internet access (where Docker is also
+unavailable), prepare RNAmel on a connected machine, then transfer it:
+
+1. On a computer **with internet**, restore the exact package versions into
+   renv's cache using the lockfile shipped with the repository:
+
+   ```r
+   install.packages("renv")
+   renv::restore(lockfile = "renv.lock")   # downloads the pinned package versions
+   ```
+
+2. Copy the populated renv cache (`renv::paths$cache()`) and the RNAmel source
+   to the offline machine (for example, on a USB drive).
+
+3. On the **offline** machine, restore from the local cache (no network) and
+   install RNAmel from source:
+
+   ```r
+   renv::restore(lockfile = "renv.lock")
+   devtools::install_local("path/to/RNAmel")
+   ```
+
+Alternatively, download the source tarballs of RNAmel and its dependencies on a
+connected machine with `download.packages()`, transfer them, and install with
+`install.packages(<files>, repos = NULL)`.
 
 ### Programmatic API
 
