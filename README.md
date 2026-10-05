@@ -269,6 +269,30 @@ p <- fig_volcano(res, lfc_thr = 1, padj_thr = 0.05,
 save_ggplot(p, "volcano.pdf", "pdf", w = 5, h = 4)
 ```
 
+### AI-assisted interpretation (optional)
+
+RNAmel can draft a biological interpretation of a selected contrast with a large
+language model. The feature is **optional and off by default**; no data leave your
+machine unless you enable it.
+
+- **API key.** Enter your key in the app's **AI** tab (a session-only password
+  field; it is held in memory, never stored or written to exported files), or set
+  the `ANTHROPIC_API_KEY` environment variable before launching. The model is
+  selectable in the same tab.
+- **Prompt.** The module sends a fixed system prompt that keeps the model grounded
+  in the supplied statistics, together with an automatically assembled summary of
+  the selected contrast (top up- and down-regulated genes with log2 fold changes
+  and adjusted p-values) and its enrichment results. A suitable instruction is,
+  for example: *"Write a clear, rigorous biological interpretation grounded only
+  in the supplied statistics. Distinguish established biology from speculation,
+  state relevant limitations, and organise the output into Summary, Up-regulated
+  programs, Down-regulated programs, Pathways and enrichment, and Caveats and
+  follow-up."*
+- **Output.** A short, structured, editable Markdown narrative. It is a
+  hypothesis-generating aid, is non-deterministic, and is **not** a reproducible
+  analytical result; always check it against the primary tables, figures, and
+  literature.
+
 ## Input formats
 
 ### Counts matrix
